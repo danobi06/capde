@@ -332,30 +332,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "Draw Black Circle");
 
 
-//        /* Get AverageL */
-//        int xSum = 0;
-//        for(Integer i: bxLeft ){
-//            xSum+=i;
-//        }
-//
-//        int ySum = 0;
-//        for(Integer i: byLeft ){
-//            ySum+=i;
-//        }
-//        Point AverageL = new Point(xSum/bxLeft.size(), ySum/byLeft.size());
-//
-//         /* Get AverageR */
-//        xSum = 0;
-//        for(Integer i: bxRight ){
-//            xSum+=i;
-//        }
-//
-//        ySum = 0;
-//        for(Integer i: byRight ){
-//            ySum+=i;
-//        }
-//        Point AverageR = new Point(xSum/bxRight.size(), ySum/byRight.size());
-//
+
 
         /*** Bounded within a Circle ***/
         int cnt = 0;
