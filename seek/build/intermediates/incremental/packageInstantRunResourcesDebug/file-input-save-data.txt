@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Apr 14 23:39:01 EDT 2017
+#Sat Apr 15 00:38:11 EDT 2017
 2.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
 5.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/AndroidManifest.xml
 5.set=ANDROID_RESOURCE

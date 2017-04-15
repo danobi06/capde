@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/dobi/workspace/seniorDesign/Android/CapDE/openCVTutorial1CameraPreview/build/intermediates/res/merged/debug/drawable/icon.png",
-        "source": "/Users/dobi/workspace/seniorDesign/Android/CapDE/openCVTutorial1CameraPreview/src/main/res/drawable/icon.png"
-    },
-    {
         "merged": "/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/merged/debug/drawable/icon.png",
         "source": "/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/res/drawable/icon.png"
     }
