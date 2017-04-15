@@ -1,16 +1,9 @@
 package com.example.dobi.seek;
 
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.os.Environment;
-import android.util.Log;
-import android.view.View;
+
 import android.widget.ImageView;
 
-import org.opencv.android.Utils;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
@@ -19,12 +12,8 @@ import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
+
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -32,17 +21,10 @@ import java.util.List;
  * Created by dobi on 4/12/17.
  */
 
-public class CrossWalkDectector {
+public class CrossWalkDetector {
 
-    ImageView mImageView;
-    String mCurrentPhotoPath;
-    private Bitmap mImageBitmap;
-
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    static final int REQUEST_TAKE_PHOTO = 1;
 
     /* Local Variables */
-    int radius = 100;
     double thresh = 190; //optimal 150
     int bw_width = 170; //#170
 
@@ -54,7 +36,6 @@ public class CrossWalkDectector {
     Mat mHierarchy = new Mat();
     Mat mDrawing = new Mat();
     private List<MatOfPoint> mContours = new ArrayList<MatOfPoint>();
-    int numRectangles = 0;
 
     java.util.List<Integer> bxLeft = new ArrayList<>();
     java.util.List<Integer> byLeft = new ArrayList<>();
@@ -161,89 +142,13 @@ public class CrossWalkDectector {
                 Imgproc.circle(rgbaImage, new Point((rect.x + rect.width), (rect.y + rect.height)), 10, pinkCircle, 2);
 
 
-                //numRectangles++;
             }
 
         }
 
     }
-//
-//    /* Get medianL */
-//        Collections.sort(bxLeft);
-//        Collections.sort(byLeft);
-//        Log.d(TAG, "bxLeft size " + bxLeft.size()/2);
-//        Log.d(TAG, "byLeft size " + byLeft.size()/2);
-//
-//        Point MedianL = new Point(bxLeft.get((bxLeft.size()/2)), byLeft.get((byLeft.size()/2)));
-//        Log.d(TAG, "Get MedianL");
-//
-//    /* Get MedianR */
-//        Collections.sort(bxRight);
-//        Collections.sort(byRight);
-//        Point MedianR = new Point(bxRight.get((bxRight.size()/2)), byRight.get((byRight.size()/2)));
-//        Log.d(TAG, "Get MedianR");
-//
-//    /* Draw Black Circle */
-//        Scalar blackCircle = new Scalar(0, 0,0);
-//        Imgproc.circle(rgbaImage, new Point(MedianL.x, MedianL.y), radius, blackCircle,2);
-//        Imgproc.circle(rgbaImage, new Point(MedianR.x, MedianR.y), radius, blackCircle,2);
-//        Log.d(TAG, "Draw Black Circle");
-//
-//        /*** Bounded within a Circle ***/
-//        int cnt = 0;
-//        java.util.List<Point>  boundedLeft = new ArrayList<>();
-//        java.util.List<Point>  boundedRight = new ArrayList<>();
-//        Log.d(TAG, "Bounded Circle 1");
-//
-//        for(Point i: bxbyLeftArray){
-//            if((Math.pow((MedianL.x - i.x), 2) + Math.pow((MedianL.y - i.y), 2) < Math.pow(radius, 2))){
-//                boundedLeft.add(i);
-//                cnt++;
-//            }
-//        }
-//        Log.d(TAG, "Bounded Circle 2");
-//        cnt = 0;
-//        for(Point i: bxbyRightArray){
-//            if((Math.pow((MedianR.x - i.x), 2) + Math.pow((MedianR.y - i.y), 2) < Math.pow(radius, 2))){
-//                boundedRight.add(i);
-//                cnt++;
-//            }
-//        }
-//        Log.d(TAG, "Bounded Circle 3");
-//    /* Left Bound */
-//        MatOfPoint boundedL = new MatOfPoint();
-//        boundedL.fromList(boundedLeft);
-//        Mat lLine = new Mat();
-//        Imgproc.fitLine(boundedL, lLine, Imgproc.DIST_L2, 0, 0.01,0.01 );
-//        Log.d(TAG, "BoundL");
-//
-//    /* Right Bound */
-//        MatOfPoint boundedR = new MatOfPoint();
-//        boundedR.fromList(boundedRight);
-//        Mat rLine = new Mat();
-//        Imgproc.fitLine(boundedR, rLine, Imgproc.DIST_L2, 0, 0.01,0.01 );
-//        Log.d(TAG, "BoundR");
-//
-//        int m = radius*10;
-//        Scalar redLine = new Scalar(255, 0,0);
-//
-//    /* Draw Lines */
-//        Imgproc.line(rgbaImage, new Point((lLine.cols() - lLine.width()*m), (lLine.rows()-m*lLine.height())),
-//                new Point((rLine.cols() + rLine.width()*m), (lLine.rows()+m*lLine.height())),
-//                redLine, 3);
-//        Log.d(TAG, "Draw Lines 1");
-//
-//        Imgproc.line(rgbaImage, new Point((rLine.cols() - rLine.width()*m), (rLine.rows()-m*rLine.height())),
-//                new Point((rLine.cols() + rLine.width()*m), (rLine.rows()+m*rLine.height())),
-//                redLine, 3);
-//        Log.d(TAG, "Draw Lines 2");
-//
-//    /* Convert back to bitMap */
-//        Utils.matToBitmap(rgbaImage, result);
-//        Log.d(TAG, "processed -> True");
-//
-//        return true;
-//    }
 
-
+    public List<MatOfPoint> getContours() {
+        return mContours;
+    }
 }
