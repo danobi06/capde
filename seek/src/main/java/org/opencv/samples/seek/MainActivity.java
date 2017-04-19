@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.view.WindowManager;
-
+import org.opencv.android.JavaCameraView;
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.CameraBridgeViewBase.CvCameraViewFrame;
@@ -14,19 +14,14 @@ import org.opencv.android.OpenCVLoader;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 
-import org.opencv.core.MatOfPoint;
-import org.opencv.core.Scalar;
-import org.opencv.imgproc.Imgproc;
-
-import java.util.List;
 
 public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCameraViewListener2 {
     private static String TAG = "MainActivity";
     private CameraBridgeViewBase mOpenCvCameraView;
 
     private Mat                  mRgba;
+    private Mat                  mRgba_t;
     private CrossWalkDetector    mDetector;
-    private Scalar               CONTOUR_COLOR;
 
     static {
         if (!OpenCVLoader.initDebug())
@@ -60,10 +55,9 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
         Log.i(TAG, "called onCreate");
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
         setContentView(R.layout.main_surface_view);
 
-        mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.main_activity_java_surface_view);
+        mOpenCvCameraView = (JavaCameraView) findViewById(R.id.main_activity_java_surface_view);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
     }
@@ -101,9 +95,9 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
 
     public void onCameraViewStarted(int width, int height) {
         Log.d(TAG, "onCameraViewStarted");
-        mRgba = new Mat(height, width, CvType.CV_8UC4);
+        //mRgba = new Mat(height, width, CvType.CV_8UC4);
+        mRgba = new Mat(320, 220, CvType.CV_8UC4);
         mDetector = new CrossWalkDetector();
-        CONTOUR_COLOR = new Scalar(0,255,0);
     }
 
     public void onCameraViewStopped() {
@@ -113,13 +107,10 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
 
     public Mat onCameraFrame(CvCameraViewFrame inputFrame) {
         Log.d(TAG, "onCameraFrame");
-
         mRgba = inputFrame.rgba();
 
         mDetector.process(mRgba);
-        List<MatOfPoint> contours = mDetector.getContours();
-        Log.e(TAG, "Contours count: " + contours.size());
-        Imgproc.drawContours(mRgba, contours, -1, CONTOUR_COLOR);
+
         return mRgba;
     }
 }

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "org.opencv.samples.tutorial1"
+        applicationId "org.opencv.samples.seek"
         minSdkVersion 8
         targetSdkVersion 8
     }

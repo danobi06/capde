@@ -1,8 +1,5 @@
 package org.opencv.samples.seek;
 
-import android.graphics.Bitmap;
-
-import android.widget.ImageView;
 
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
@@ -11,8 +8,6 @@ import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
-
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -25,8 +20,8 @@ public class CrossWalkDetector {
 
 
     /* Local Variables */
-    double thresh = 190; //optimal 150
-    int bw_width = 170; //#170
+    double thresh = 150; //optimal 150
+    int bw_width = 200; //#170
 
     //Cache
     //Mat rgbaImage = new Mat(); //image to process
@@ -34,8 +29,11 @@ public class CrossWalkDetector {
     Mat mThresh1 = new Mat();
     Mat mEdges = new Mat();
     Mat mHierarchy = new Mat();
-    Mat mDrawing = new Mat();
-    private List<MatOfPoint> mContours = new ArrayList<MatOfPoint>();
+    Scalar lineColor = new Scalar(0, 255, 0);
+    Scalar tealCircle = new Scalar(0, 255, 255);
+
+    private java.util.List<MatOfPoint> mContours = new ArrayList<>();
+    java.util.List<MatOfPoint> listwrapper;
 
     java.util.List<Integer> bxLeft = new ArrayList<>();
     java.util.List<Integer> byLeft = new ArrayList<>();
@@ -98,57 +96,41 @@ public class CrossWalkDetector {
 
     public void process(Mat rgbaImage) {
 
-    /* Gray scale */
+  /* Gray scale */
         mGray = new Mat(rgbaImage.size(), CvType.CV_8UC1);
         Imgproc.cvtColor(rgbaImage, mGray, Imgproc.COLOR_RGB2GRAY);
 
     /*Threshold 1 */
-        mThresh1 = new Mat(mGray.size(), mGray.type());
+        mThresh1 = new Mat(rgbaImage.size(), mGray.type());
         Imgproc.threshold(mGray, mThresh1, thresh, 255, 0);
+        mGray.release();
+
+    /*Canny */
+//        mEdges = new Mat(mThresh1.size(), mThresh1.type());
+//        Imgproc.Canny(mThresh1, mEdges, thresh, thresh * 2);
+//        mThresh1.release();
 
         mEdges = new Mat(mThresh1.size(), mThresh1.type());
-
-        Imgproc.Canny(mThresh1, mEdges, thresh, thresh * 2);
-
-
-
+        Imgproc.Sobel(mThresh1, mEdges, CvType.CV_8U, 0,1);
     /* findContours */
-
-        Imgproc.findContours(mEdges, mContours, mHierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
-
+        List<MatOfPoint> contours = new ArrayList<>();
+        /* TODO
+         limit contour size */
+        Imgproc.findContours(mEdges, contours, mHierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
+        mEdges.release();
         /*** draw lines ***/
 
-        Iterator<MatOfPoint> each = mContours.iterator();
-        Scalar lineColor = new Scalar(0, 255, 0);
+        Iterator<MatOfPoint> each = contours.iterator();
 
         while(each.hasNext()){
             MatOfPoint wrapper = each.next();
             Rect rect = Imgproc.boundingRect(wrapper);
-            Imgproc.drawContours(mDrawing, mContours, 0, lineColor);
 
-            if (rect.width > bw_width) {
-                Imgproc.line(rgbaImage, new Point(rect.x, rect.y), new Point((rect.x + rect.width), (rect.y + rect.height)), lineColor);
-                bxRight.add(rect.x + rect.width);
-                byRight.add(rect.y + rect.height);
-                bxLeft.add(rect.x);
-                byLeft.add(rect.y);
-                //int[] lArray = {rect.x, rect.y};
-                bxbyLeftArray.add(new Point(rect.x, rect.y));
-                //int[] rArray = {(rect.x + rect.width), (rect.y + rect.height)};
-                bxbyRightArray.add(new Point((rect.x + rect.width), (rect.y + rect.height)));
-                Scalar pinkCircle = new Scalar(0, 255, 255);
-
-                Imgproc.circle(rgbaImage, new Point(rect.x, rect.y), 10, pinkCircle, 2);
-                Imgproc.circle(rgbaImage, new Point((rect.x + rect.width), (rect.y + rect.height)), 10, pinkCircle, 2);
-
-
+            if (rect.width > 300) {
+                Imgproc.line(rgbaImage, new Point(rect.x, rect.y), new Point((rect.x + rect.width), rect.y), lineColor,2);
+                Imgproc.circle(rgbaImage, new Point(rect.x, rect.y), 10, tealCircle, 2);
+                Imgproc.circle(rgbaImage, new Point((rect.x + rect.width), rect.y), 10, tealCircle, 2);
             }
-
         }
-
-    }
-
-    public List<MatOfPoint> getContours() {
-        return mContours;
     }
 }

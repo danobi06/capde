@@ -61,8 +61,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CameraBridgeViewBase_camera_id org.opencv.samples.tutorial1:camera_id}</code></td><td></td></tr>
-           <tr><td><code>{@link #CameraBridgeViewBase_show_fps org.opencv.samples.tutorial1:show_fps}</code></td><td></td></tr>
+           <tr><td><code>{@link #CameraBridgeViewBase_camera_id org.opencv.samples.seek:camera_id}</code></td><td></td></tr>
+           <tr><td><code>{@link #CameraBridgeViewBase_show_fps org.opencv.samples.seek:show_fps}</code></td><td></td></tr>
            </table>
            @see #CameraBridgeViewBase_camera_id
            @see #CameraBridgeViewBase_show_fps
@@ -71,7 +71,7 @@ containing a value of this type.
             0x7f010000, 0x7f010001
         };
         /**
-          <p>This symbol is the offset where the {@link org.opencv.samples.tutorial1.R.attr#camera_id}
+          <p>This symbol is the offset where the {@link org.opencv.samples.seek.R.attr#camera_id}
           attribute's value can be found in the {@link #CameraBridgeViewBase} array.
 
 
@@ -91,11 +91,11 @@ containing a value of this type.
 <tr><td><code>back</code></td><td>99</td><td></td></tr>
 <tr><td><code>front</code></td><td>98</td><td></td></tr>
 </table>
-          @attr name org.opencv.samples.tutorial1:camera_id
+          @attr name org.opencv.samples.seek:camera_id
         */
         public static final int CameraBridgeViewBase_camera_id = 1;
         /**
-          <p>This symbol is the offset where the {@link org.opencv.samples.tutorial1.R.attr#show_fps}
+          <p>This symbol is the offset where the {@link org.opencv.samples.seek.R.attr#show_fps}
           attribute's value can be found in the {@link #CameraBridgeViewBase} array.
 
 
@@ -105,7 +105,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.opencv.samples.tutorial1:show_fps
+          @attr name org.opencv.samples.seek:show_fps
         */
         public static final int CameraBridgeViewBase_show_fps = 0;
     };

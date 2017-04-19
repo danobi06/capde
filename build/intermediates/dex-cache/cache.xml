@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
+        jar="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="28920e99194d85e53c9d793a330259282cd786a2">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6d05907a8f6296dbcf3bb6183d89d998d531da2f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
         <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_554a0e0b43f033b93f1c9e04d3bfa725b7276e8c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5a24134b2e13130aace3f06b5951787f09b76540">
-        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6d05907a8f6296dbcf3bb6183d89d998d531da2f/classes.dex" />
     </item>
 
 </items>
