@@ -60,6 +60,8 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
         mOpenCvCameraView = (JavaCameraView) findViewById(R.id.main_activity_java_surface_view);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
+        mOpenCvCameraView.setMaxFrameSize(1280, 720);
+
     }
 
     @Override
@@ -95,8 +97,8 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
 
     public void onCameraViewStarted(int width, int height) {
         Log.d(TAG, "onCameraViewStarted");
-        //mRgba = new Mat(height, width, CvType.CV_8UC4);
-        mRgba = new Mat(320, 220, CvType.CV_8UC4);
+        mRgba = new Mat(height, width, CvType.CV_8UC4);
+        //mRgba = new Mat(320, 220, CvType.CV_8UC4);
         mDetector = new CrossWalkDetector();
     }
 

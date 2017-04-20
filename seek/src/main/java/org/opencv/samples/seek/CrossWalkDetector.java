@@ -21,7 +21,7 @@ public class CrossWalkDetector {
 
     /* Local Variables */
     double thresh = 150; //optimal 150
-    int bw_width = 200; //#170
+    int bw_width = 300; //#170
 
     //Cache
     //Mat rgbaImage = new Mat(); //image to process
@@ -97,21 +97,14 @@ public class CrossWalkDetector {
     public void process(Mat rgbaImage) {
 
   /* Gray scale */
-        mGray = new Mat(rgbaImage.size(), CvType.CV_8UC1);
         Imgproc.cvtColor(rgbaImage, mGray, Imgproc.COLOR_RGB2GRAY);
 
     /*Threshold 1 */
-        mThresh1 = new Mat(rgbaImage.size(), mGray.type());
         Imgproc.threshold(mGray, mThresh1, thresh, 255, 0);
         mGray.release();
 
-    /*Canny */
-//        mEdges = new Mat(mThresh1.size(), mThresh1.type());
-//        Imgproc.Canny(mThresh1, mEdges, thresh, thresh * 2);
-//        mThresh1.release();
-
-        mEdges = new Mat(mThresh1.size(), mThresh1.type());
         Imgproc.Sobel(mThresh1, mEdges, CvType.CV_8U, 0,1);
+
     /* findContours */
         List<MatOfPoint> contours = new ArrayList<>();
         /* TODO
@@ -126,7 +119,14 @@ public class CrossWalkDetector {
             MatOfPoint wrapper = each.next();
             Rect rect = Imgproc.boundingRect(wrapper);
 
-            if (rect.width > 300) {
+            if (rect.width > bw_width){
+//                (rect.y + rect.height)), lineColor);
+//                bxRight.add(rect.x + rect.width);
+//                byRight.add(rect.y);
+//                bxLeft.add(rect.x);
+//                byLeft.add(rect.y);
+//                bxbyLeftArray.add(new Point(rect.x, rect.y));
+//                bxbyRightArray.add(new Point((rect.x + rect.width), rect.y));
                 Imgproc.line(rgbaImage, new Point(rect.x, rect.y), new Point((rect.x + rect.width), rect.y), lineColor,2);
                 Imgproc.circle(rgbaImage, new Point(rect.x, rect.y), 10, tealCircle, 2);
                 Imgproc.circle(rgbaImage, new Point((rect.x + rect.width), rect.y), 10, tealCircle, 2);
