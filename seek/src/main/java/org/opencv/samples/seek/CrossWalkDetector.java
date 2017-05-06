@@ -33,6 +33,7 @@ public class CrossWalkDetector {
     Mat mThresh1 = new Mat();
     Mat mEdges = new Mat();
     Mat mHierarchy = new Mat();
+    java.util.List<Double> Bdist = new ArrayList<>();
 
 
     java.util.List<Integer> bxLeft = new ArrayList<>();
@@ -68,7 +69,6 @@ public class CrossWalkDetector {
         double a=Math.acos(inner_product/(len1*len2));
         return a*180/Math.PI;
 
-
     }
 
     //lineIntersect
@@ -91,6 +91,87 @@ public class CrossWalkDetector {
         return val;
 
     }
+
+    /* returns a average from a list of points */
+    private Point avg(java.util.List<Point> input){
+        Log.d(TAG,"calculating average");
+        int sumx = 0;
+        int sumy = 0;
+        for (int i = 0; i < input.size(); i++) {
+            sumx += input.get(i).x;
+            sumy += input.get(i).y;
+        }
+        double x = sumx/input.size();
+        double y = sumy/input.size();
+        Log.d(TAG,"Point Average " + "("+ x + ", "+ y + ")");
+
+        return new Point(x,y);
+    }
+    /* returns a average from a list of points */
+//    private Point avg2(java.util.List<Point> inputL, java.util.List<Point> inputR){
+//        Log.d(TAG,"calculating average of all the lengths");
+//        int sumx = 0;
+//        int sumy = 0;
+//        for (int i = 0; i < inputL.size(); i++) {
+//            sumx += inputL.get(i).x;
+//            sumy += input.get(i).y;
+//        }
+//        double x = sumx/input.size();
+//        double y = sumy/input.size();
+//        Log.d(TAG,"Point Average " + "("+ x + ", "+ y + ")");
+//
+//        return new Point(x,y);
+//    }
+    /* returns a list of closely related points */
+    private java.util.List crt(java.util.List<Point> input){
+        Log.d(TAG,"CRT");
+        java.util.List<Point> Output = new ArrayList<>();
+        Point avg = avg(input);
+        double x1 = avg.x;
+        double y1 = avg.y;
+
+
+        for (int i = 0; i < input.size(); i++) { //7 random points
+            double x2 = input.get(i).x;
+            double y2 = input.get(i).y;
+            Log.d(TAG,"Point " + "("+ x2 + ", "+ y2 + ")");
+            double distance = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
+            Log.d(TAG,"Distance is: "+ distance);
+            if(distance <= 950){
+                Output.add(input.get(i));
+            }
+        }
+        Log.d(TAG, "Output size: "+Output.size());
+        return Output;
+    }
+    /* returns a list of closely related points */
+    private java.util.List<java.util.List<Point>> crt2(Mat img, java.util.List<Point> leftBound, java.util.List<Point> rightBound, int avgdist){
+        Log.d(TAG,"CRT2");
+        java.util.List<Point> outputL = new ArrayList<>();
+        java.util.List<Point> outputR = new ArrayList<>();
+
+
+        for (int i = 0; i < leftBound.size(); i++) { //7 random points
+            double x1 = leftBound.get(i).x;
+            double y1 = leftBound.get(i).y;
+            double x2 = rightBound.get(i).x;
+            double y2 = rightBound.get(i).y;
+            Log.d(TAG,"Point1 " + "("+ x1 + ", "+ y1 + ")");
+            Log.d(TAG,"Point2 " + "("+ x2 + ", "+ y2 + ")");
+            double dist = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
+            Log.d(TAG,"Point Dist: "+ dist);
+            if((int)dist >= (avgdist - avgdist/5) || (int)dist <= (avgdist + avgdist/5) ){
+                outputL.add(leftBound.get(i));
+                outputR.add(rightBound.get(i));
+                Imgproc.circle(img, leftBound.get(i), 10, new Scalar(100,100,250), 2); //left points
+                Imgproc.circle(img, rightBound.get(i), 10,  new Scalar(250,250,250), 2); //right points
+            }
+        }
+        java.util.List<java.util.List<Point>> list = new ArrayList<>();
+        list.add(outputL);
+        list.add(outputR);
+        return list;
+    }
     /* returns a list of random points */
     private java.util.List setRand(java.util.List<Point> input){
         Log.d(TAG,"randomizing boundaries");
@@ -105,13 +186,24 @@ public class CrossWalkDetector {
     /* sets the bounds for the crosswalk */
     private double[] setBounds(Mat img, java.util.List<Point> bLine){
         MatOfPoint matOfPoint = new MatOfPoint();
+        //java.util.List<Point> outputLine = new ArrayList<>();
         Mat outLine = new Mat(); //Right bounding line
         Log.d(TAG, "bLine size: "+bLine.size());
         //matOfPoint.fromList(setRand(bLine)); //mat from random points
+        //outputLine = crt(bLine);
+        //matOfPoint.fromList(crt(bLine)); //mat from random points
+//        if (outputLine.size() < 2){
+//            //matOfPoint.fromList(bLine); //mat from all points
+//            double[] empty = {};
+//            return empty;
+//
+//        }
+//        matOfPoint.fromList(outputLine); //mat from random points
+
         matOfPoint.fromList(bLine); //mat from all points
 
         /*relase bLine */
-        Imgproc.fitLine(matOfPoint, outLine, Imgproc.DIST_L2, 0,0,0.01);
+        Imgproc.fitLine(matOfPoint, outLine, Imgproc.DIST_L2, 0,0.5,0.5);
 
         double[] p_1 = outLine.get(0,0);//normalized direction x
         double[] p_2 = outLine.get(1,0);//normalized direction y
@@ -119,8 +211,12 @@ public class CrossWalkDetector {
         double[] p_4 = outLine.get(3,0);//point on line y
         double LTlineL = (-p_3[0]) * (p_1[0]/p_2[0]) + p_4[0];
         double LTlineR = (img.cols() - p_3[0]) * (p_1[0]/p_2[0]) + p_4[0];
-        double[] pair = {LTlineL, LTlineR};
-        return pair;
+
+        double slope = (LTlineL-LTlineR)/(0-img.cols());
+        double intercept = LTlineR - (slope * img.cols());
+        double[] slope_intercept = {slope, intercept};
+
+        return slope_intercept;
     }
 
     public void process(Mat rgbaImage) {
@@ -144,6 +240,7 @@ public class CrossWalkDetector {
         mEdges.release();
         /*** draw lines ***/
         Scalar tealCircle = new Scalar(0, 255, 255);
+        Scalar yellowCircle = new Scalar(255, 255, 0);
         Scalar lineColor = new Scalar(0, 255, 0);
         Iterator<MatOfPoint> each = contours.iterator();
         MatOfPoint wrapper;
@@ -151,37 +248,53 @@ public class CrossWalkDetector {
         while(each.hasNext()){
             wrapper = each.next();
             rect = Imgproc.boundingRect(wrapper);
+            //if (rect.width > bw_width){
 
-            if (rect.width > bw_width){
-//                (rect.y + rect.height)), lineColor);
-//                bxRight.add(rect.x + rect.width);
-//                byRight.add(rect.y);
-//                bxLeft.add(rect.x);
-//                byLeft.add(rect.y);
-                bxbyLeftArray.add(new Point(rect.x, rect.y)); //points for left line segment
-                bxbyRightArray.add(new Point((rect.x + rect.width), rect.y)); //points for right lines segment
+            if (rect.width >= rgbaImage.width() - (rgbaImage.width()*.75)){ //rect with should be 1/4 or greater then the screen width
+                Point LBP = new Point(rect.x, rect.y); //left bound point
+                Point RBP = new Point((rect.x + rect.width), rect.y); //right bound point
+
+                bxbyLeftArray.add(LBP); //points for left line segment
+                bxbyRightArray.add(RBP); //points for right lines segment
+
+                double dist = Math.sqrt(Math.pow((RBP.x-LBP.x),2) + Math.pow((RBP.y-LBP.y),2));
+                Bdist.add(dist);
                 Imgproc.line(rgbaImage, new Point(rect.x, rect.y), new Point((rect.x + rect.width), rect.y), lineColor,2);
-                Imgproc.circle(rgbaImage, new Point(rect.x, rect.y), 10, tealCircle, 2);
+                Imgproc.circle(rgbaImage, new Point(rect.x, rect.y), 10, yellowCircle, 2);
                 Imgproc.circle(rgbaImage, new Point((rect.x + rect.width), rect.y), 10, tealCircle, 2);
             }
         }
 
-        if(bxbyLeftArray.size() >=5){
+        if(bxbyLeftArray.size() >=7){
             Scalar boundColor = new Scalar(0, 0, 255);
             Scalar intersectColor = new Scalar(255,0,0);
-            double[] LTline = setBounds(rgbaImage, bxbyLeftArray); //line boundary for left points
-            double[] RTline = setBounds(rgbaImage, bxbyRightArray); //line boundary for right points
-            Imgproc.line(rgbaImage, new Point(rgbaImage.cols() - 1, LTline[1]), new Point(0, LTline[0]), boundColor, 3);
-            Imgproc.line(rgbaImage, new Point(rgbaImage.cols() - 1, RTline[1]),new Point(0, RTline[0]), boundColor, 3);
+            //Calculate average of the distance
+            int sum = 0;
+            for (int i = 0; i <Bdist.size() ; i++) {
+                sum += Bdist.get(i);
+            }
+            int avgDist = sum/Bdist.size();
+            Log.d(TAG,"avgDist is: "+avgDist);
+            //call crt2 to remove points that don't match dist
+            java.util.List<java.util.List<Point>> bounds= crt2(rgbaImage, bxbyLeftArray,bxbyRightArray, avgDist);
 
-            double m1 = (LTline[0]-LTline[1])/(0-rgbaImage.cols()); //slope left line
-            double b1 = LTline[1] - m1*rgbaImage.cols(); //intersect right line
-            double m2 = (RTline[0]-RTline[1])/(0-rgbaImage.cols()); //slope left line
-            double b2 = RTline[1] - m2*rgbaImage.cols(); //intersect right line
+            double[] LTline = setBounds(rgbaImage, bounds.get(0)); //line boundary for left points
+            double[] RTline = setBounds(rgbaImage, bounds.get(1)); //line boundary for right points
+            if (LTline.length > 1 && RTline.length > 1) {
 
-            double[] intersect = lineIntersect(m2,b2, m1, b1);
-            Imgproc.circle(rgbaImage, new Point ((int) intersect[0],(int) intersect[1]),10,intersectColor,15);
+
+                double m1 = LTline[0]; //slope left line
+                double b1 = LTline[1]; //intersect right line
+                double m2 = RTline[0]; //slope left line
+                double b2 = RTline[1]; //intersect right line
+
+                Imgproc.line(rgbaImage, new Point((0 - b1) / m1, 0), new Point((rgbaImage.height() - b1) / m1, rgbaImage.height()), boundColor, 3);
+                Imgproc.line(rgbaImage, new Point((0 - b2) / m2, 0), new Point((rgbaImage.height() - b2) / m2, rgbaImage.height()), boundColor, 3);
+
+                double[] intersect = lineIntersect(m2, b2, m1, b1);
+                Imgproc.circle(rgbaImage, new Point((int) intersect[0], (int) intersect[1]), 10, intersectColor, 15);
+            }
+
         }
-
     }
 }

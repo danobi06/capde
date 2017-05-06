@@ -6,26 +6,30 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1493175511025"
+    timestamp="1494112594719"
     token="6212732236303268699"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="130" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="12" />
     <task
         name="verifier"
-        duration="0" />
+        duration="8" />
+
+    <artifact
+        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1493167331020"
+        timestamp="1494104088111"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -63,15 +67,11 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1493175349285"
+        timestamp="1494112594719"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1493175511025"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
