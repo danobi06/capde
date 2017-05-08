@@ -1,7 +1,9 @@
 package org.opencv.samples.seek;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.multidex.MultiDex;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.view.WindowManager;

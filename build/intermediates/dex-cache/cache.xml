@@ -3,12 +3,120 @@
 
     <item
         is-multidex="true"
-        jar="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.apache.maven.scm/maven-scm-provider-svnexe/1.4/b3213b40157b701ba079b738baac391e41418c18/maven-scm-provider-svnexe-1.4.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="28920e99194d85e53c9d793a330259282cd786a2">
-        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6d05907a8f6296dbcf3bb6183d89d998d531da2f/classes.dex" />
+        sha1="b3213b40157b701ba079b738baac391e41418c18">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/maven-scm-provider-svnexe-1.4_6d4edc65e71d2fdd2fbf49115aa014fbc8a0f188/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.8.4/22f1e0c32a2bfc8edd45520db176bac98cebbbfe/ant-launcher-1.8.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="22f1e0c32a2bfc8edd45520db176bac98cebbbfe">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/ant-launcher-1.8.4_6bfc124da48c9ba30378e26301af2ecb9b0affdb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/commons-httpclient/commons-httpclient/3.1/964cd74171f427720480efdec40a7c7f6e58426a/commons-httpclient-3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="964cd74171f427720480efdec40a7c7f6e58426a">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/commons-httpclient-3.1_16d4e9d9ad8591703f0152eb049eef44cc0b9c3c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/com.esotericsoftware.reflectasm/reflectasm/1.07/76f11c94a53ee975a0d9154b325c408b210155bd/reflectasm-1.07-shaded.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="76f11c94a53ee975a0d9154b325c408b210155bd">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/reflectasm-1.07-shaded_c3d245b7647a2c5dcbe040f805b6e706d08221db/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/net.sourceforge.jmatio/jmatio/1.2/a9f6aef2e9629f401769a655151a7d913d3eb8d8/jmatio-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9f6aef2e9629f401769a655151a7d913d3eb8d8">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/jmatio-1.2_607a5d4e03110d6749aba994b662c48e22f70a6e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.2/83b5b8a7ba1c08f9e8c8ff2373724e33d3c1e22a/commons-io-2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="83b5b8a7ba1c08f9e8c8ff2373724e33d3c1e22a">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/commons-io-2.2_46bd630c7d9a16b920f4d90dde82333cf376a922/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.6.3/5cf4f55a71ae352d9c13ede8388974527540e506/jsoup-1.6.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cf4f55a71ae352d9c13ede8388974527540e506">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/jsoup-1.6.3_24f15a9699a574be594496d2c20b93f6564cc9a1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/com.esotericsoftware.kryo/kryo/2.21/9a4e69cff8d225729656f7e97e40893b23bffef/kryo-2.21.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="09a4e69cff8d225729656f7e97e40893b23bffef">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/kryo-2.21_ff241bc64388480bec659263c1c1c200bf72ce9f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/com.googlecode.matrix-toolkits-java/mtj/1.0.2/733023a9610f80d4688e616f8121ebfc8b8b9168/mtj-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="733023a9610f80d4688e616f8121ebfc8b8b9168">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/mtj-1.0.2_2cd46b5cdf956e7c14c1a064f5299bd6d423b83b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/14.0.1/69e12f4c6aeac392555f1ea86fab82b5e5e31ad4/guava-14.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="69e12f4c6aeac392555f1ea86fab82b5e5e31ad4">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/guava-14.0.1_36bc8d8972500cd819d28640a9c2c0892b06d73f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.apache.maven.scm/maven-scm-api/1.4/e294693ce217bd6f470b728127854e6ca787fd29/maven-scm-api-1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e294693ce217bd6f470b728127854e6ca787fd29">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/maven-scm-api-1.4_4958e2071831ad162840a300dc9f38a05c3e7d3b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.android/build-cache/4957c53247f45a1b399c6fa3b7a3b849b716906f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d9319853a4cdfbd36bcf3e6ab61dbc129a5b2be2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-vfs2/2.0/b5af3b9c96b060d77c68fa5ac9384b402dd58013/commons-vfs2-2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b5af3b9c96b060d77c68fa5ac9384b402dd58013">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/commons-vfs2-2.0_a55c67688bb761ea8f9ddd08873aa35d3a07771a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -20,13 +128,319 @@
         <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_554a0e0b43f033b93f1c9e04d3bfa725b7276e8c/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/dobi/workspace/seniorDesign/Android/CapDE/openCVLibrary300/build/intermediates/bundles/default/classes.jar"
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.8.4/8acff3fb57e74bc062d4675d9dcfaffa0d524972/ant-1.8.4.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="067e736597c228906a743b3183c77eb2f1a40fa1">
-        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/pre-dexed/debug/classes_53639ea1a33e86178252e07d303b94dfc2219e0d.jar" />
+        sha1="8acff3fb57e74bc062d4675d9dcfaffa0d524972">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/ant-1.8.4_dfc20193691d332d822a3835129d4657d085c15d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a5104d981bfe82589c3f5999cae9fa14480a35a">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6d05907a8f6296dbcf3bb6183d89d998d531da2f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/jgrapht/jgrapht/0.8.2/1dd0416807b7e4f984e1b9efb22a710cdda0b448/jgrapht-0.8.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1dd0416807b7e4f984e1b9efb22a710cdda0b448">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/jgrapht-0.8.2_d4cf05216fa6b83e59d242703ba5d330eb5c6dc0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/net.sourceforge.f2j/arpack_combined_all/0.1/225619a060b42605b4d9fd4af11815664abf26eb/arpack_combined_all-0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="225619a060b42605b4d9fd4af11815664abf26eb">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/arpack_combined_all-0.1_7edff0f5588bf1c60bff87ff9557dbe6d13742ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/net.sf.jafama/JaFaMa/1.2/a287cb81424b142185b15fe521a0d57ad590699/JaFaMa-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a287cb81424b142185b15fe521a0d57ad590699">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/JaFaMa-1.2_3ba81af87304f42693b12ef13321a4ef21ec701a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.6/ce1edb914c94ebc388f086c6827e8bdeec71ac2/commons-lang-2.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0ce1edb914c94ebc388f086c6827e8bdeec71ac2">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/commons-lang-2.6_14288e159b4096ba1bfd21318ea63d7d67b606f0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/javassist/javassist/3.12.1.GA/526633327faa61aee448a519e8a4d53ec3057885/javassist-3.12.1.GA.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="526633327faa61aee448a519e8a4d53ec3057885">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/javassist-3.12.1.GA_c4de82ab90b939b894bec528291d6ee3b256ab82/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/vigna.dsi.unimi.it/jal/20031117/a93c3680c4b74cb51cad8ef582f41c456f158e13/jal-20031117.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a93c3680c4b74cb51cad8ef582f41c456f158e13">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/jal-20031117_31e4f666bf9280d92ca600c7a2815beae33c56ed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.openimaj/core-citation/1.3.5/e8835e1b6909827a1b96380eeb47af0edda1a9d1/core-citation-1.3.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e8835e1b6909827a1b96380eeb47af0edda1a9d1">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/core-citation-1.3.5_098932d4a651883f6538951c7106f1fbf0c68a83/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/4.0/659add6efc75a4715d738e73f07505246edf4d66/asm-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="659add6efc75a4715d738e73f07505246edf4d66">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/asm-4.0_fd53e6ecb2b966c477c0a3252b8a85d06a6b190b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.apache.maven.scm/maven-scm-provider-svn-commons/1.4/54bc1dc24c5d205b4d251a83f4ea63808c21a628/maven-scm-provider-svn-commons-1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="54bc1dc24c5d205b4d251a83f4ea63808c21a628">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/maven-scm-provider-svn-commons-1.4_d74bc785673fc489842c40c8f334895d7ae690b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/gov.nist.math/jama/1.0.3/8bcf5a314b76cadd68daa37eafe0a46d8909ab47/jama-1.0.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8bcf5a314b76cadd68daa37eafe0a46d8909ab47">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/jama-1.0.3_aba0b2ab543b77eee8a1e0e89bb8589e09077a29/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/xmlpull/xmlpull/1.1.3.1/2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa/xmlpull-1.1.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/xmlpull-1.1.3.1_8d54a42dd12896c131e210b9a2281a506984a52b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.openimaj/MatrixLib/1.3.5/f1ac856fdcf9f63b3dbb34ec0ea45166757fff42/MatrixLib-1.3.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f1ac856fdcf9f63b3dbb34ec0ea45166757fff42">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/MatrixLib-1.3.5_d8c5d55afe0e1a3de2c83689813a148b995baf6e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/regexp/regexp/1.3/973df2b78b67bcd3144c3dbbb88da691065a3f8d/regexp-1.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="973df2b78b67bcd3144c3dbbb88da691065a3f8d">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/regexp-1.3_1a2494701b60a5dd2cf8286ee3991e9e74c2c5fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/com.thoughtworks.xstream/xstream/1.4.3/3427c153a5ad0f2cfa923528ad8be875c8cb1cff/xstream-1.4.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3427c153a5ad0f2cfa923528ad8be875c8cb1cff">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/xstream-1.4.3_4290326f53a94c346e7359a11bb83a73c6cce1f1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.6/b7f0fc8f61ecadeb3695f0b9464755eee44374d4/commons-codec-1.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b7f0fc8f61ecadeb3695f0b9464755eee44374d4">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/commons-codec-1.6_b4b48a0ca12d6bed5f6da21eba462b2ccd207a11/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/xpp3/xpp3_min/1.1.4c/19d4e90b43059058f6e056f794f0ea4030d60b86/xpp3_min-1.1.4c.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="19d4e90b43059058f6e056f794f0ea4030d60b86">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/xpp3_min-1.1.4c_577442ca09a94aef0b26e82d0be9d4a7261be1ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.openimaj/core-math/1.3.5/78a710ae3da9e8945aa741a01a733a6830ead315/core-math-1.3.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78a710ae3da9e8945aa741a01a733a6830ead315">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/core-math-1.3.5_8386cdff4808964e886ce1c0631a2e313f72948a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.la4j/la4j/0.4.0/cd032e40fe244a295078f746d9feed5eaaec8458/la4j-0.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd032e40fe244a295078f746d9feed5eaaec8458">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/la4j-0.4.0_c527b35172d0bc91ebb0dfb661b9133b45feb0a0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/com.esotericsoftware.minlog/minlog/1.2/59bfcd171d82f9981a5e242b9e840191f650e209/minlog-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="59bfcd171d82f9981a5e242b9e840191f650e209">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/minlog-1.2_239c4e16fe18b79699c24ee7cb4bb47ac5c47889/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.openimaj/core/1.3.5/c27f42bfd81ec592ca950ee1194c966b90bd070b/core-1.3.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c27f42bfd81ec592ca950ee1194c966b90bd070b">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/core-1.3.5_7cc98e71b9af391266e8fc7da25430f613bb164a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/concurrent/concurrent/1.3.4/1cf394c2a388199db550cda311174a4c6a7d117c/concurrent-1.3.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1cf394c2a388199db550cda311174a4c6a7d117c">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/concurrent-1.3.4_77e4b01df8f7e59151d56630543ca23d1d36977d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/colt/colt/1.2.0/abc984f3adc760684d49e0f11ddf167ba516d4f/colt-1.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0abc984f3adc760684d49e0f11ddf167ba516d4f">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/colt-1.2.0_4041c4c940270a89c3540a6a6c7fd6b83ae55661/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.jbibtex/jbibtex/1.0.2/2f6426ee1bdcb3f8a11de6193613f38e08fd7be7/jbibtex-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2f6426ee1bdcb3f8a11de6193613f38e08fd7be7">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/jbibtex-1.0.2_3dfbb4283f5e816592ff176303f73d3eaa497598/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/gov.sandia.foundry/gov-sandia-cognition-common-core/3.3.0/7e94b1424bbc0bf444be19067e8806e3ab0be884/gov-sandia-cognition-common-core-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e94b1424bbc0bf444be19067e8806e3ab0be884">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/gov-sandia-cognition-common-core-3.3.0_342bc283f29b64ffde9e90f70bdedd3a359ad5f6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.3/a85dc3aa929de625606270ae69a343cda69b7670/commons-math3-3.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a85dc3aa929de625606270ae69a343cda69b7670">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/commons-math3-3.3_71d52f1ec38ee18c14ff57f8663e52d5e24abc7e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/1.5.6/8fb6b798a4036048b3005e058553bf21a87802ed/plexus-utils-1.5.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fb6b798a4036048b3005e058553bf21a87802ed">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/plexus-utils-1.5.6_942b4703cf4d972e40e32f3059188af2ba1add94/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/gov.sandia.foundry/gov-sandia-cognition-learning-core/3.3.0/1c9db98cc685559912545e004233b420bc7775b3/gov-sandia-cognition-learning-core-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1c9db98cc685559912545e004233b420bc7775b3">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/gov-sandia-cognition-learning-core-3.3.0_3e7e860d8c0b782a4ab8aaccc8868d83d189231c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.openimaj/core-aop-support/1.3.5/45cda1c58b04f8bacb7749e74d2e2ef537f5e34e/core-aop-support-1.3.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45cda1c58b04f8bacb7749e74d2e2ef537f5e34e">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/core-aop-support-1.3.5_58540a0118218fb6cb115e4c29041440798c0d0c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="87c0ea803b69252868d09308b4618f766f135a96">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/objenesis-2.1_a934ecdcc4ded96bcae175d743d456a8be3ea32a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/uk.com.robust-it/cloning/1.9.1/254011d483c2e6560af1e44cde9385eb3b6da6a5/cloning-1.9.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="254011d483c2e6560af1e44cde9385eb3b6da6a5">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/cloning-1.9.1_d27ed89ed8a3d4754f715d74d2c86826634777bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.14/3b254c872b95141751f414e353a25c2ac261b51/log4j-1.2.14.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="03b254c872b95141751f414e353a25c2ac261b51">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/log4j-1.2.14_05a2e3001dbc4da015b0e1dac8ad0a1bac730d7e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/net.sf.trove4j/trove4j/3.0.2/c65860fd3700663a6ed870605f926d770f3bd2d4/trove4j-3.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c65860fd3700663a6ed870605f926d770f3bd2d4">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/trove4j-3.0.2_5800273a070881c6e0ebcd51979a64041037244e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/com.googlecode.netlib-java/netlib-java/0.9.3/1d41b60e5180f6bcb7db15e7353dde7147cd3928/netlib-java-0.9.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1d41b60e5180f6bcb7db15e7353dde7147cd3928">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/netlib-java-0.9.3_86cebd9252babb8fdbf25975c9dcb3c188c3c31c/classes.dex" />
     </item>
 
 </items>

@@ -56,13 +56,14 @@ ADDED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/Androi
 	android:anyDensity
 		ADDED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/AndroidManifest.xml:27:23-48
 uses-sdk
-ADDED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/AndroidManifest.xml:29:5-43
+ADDED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/AndroidManifest.xml:29:5-44
 MERGED from [CapDE:openCVLibrary300:unspecified] /Users/dobi/workspace/seniorDesign/Android/CapDE/openCVLibrary300/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:40
+MERGED from [com.android.support:multidex:1.0.1] /Users/dobi/.android/build-cache/4957c53247f45a1b399c6fa3b7a3b849b716906f/output/AndroidManifest.xml:18:5-42
 	android:targetSdkVersion
 		INJECTED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/AndroidManifest.xml
 		INJECTED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/AndroidManifest.xml:29:15-40
+		ADDED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/AndroidManifest.xml:29:15-41
 		INJECTED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/AndroidManifest.xml
 		INJECTED from /Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/AndroidManifest.xml
 uses-permission#android.permission.CAMERA
