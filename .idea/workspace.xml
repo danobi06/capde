@@ -31,45 +31,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35cbae9e-f7fb-48c9-b665-c35c025b691d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/core_0_30.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/ddogleg_0_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/dense64_0_30.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/equation_0_30.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/simple_0_30.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/DistanceFromLine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/Line2D.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/LineGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/LineManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/Point2D.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/classes/debug/org/opencv/samples/seek/RANSAC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/RANSAC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/RANSAC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/RANSAC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/RANSAC.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d9319853a4cdfbd36bcf3e6ab61dbc129a5b2be2/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/10/core-0.30_355167f660a52f87d1a305fa0d40a2f6943eb679/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/10/ddogleg-0.10_508628bd66cdc17c90ac16df7b5ba7b4e5f76b18/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/10/dense64-0.30_ce5d3e2863ce01d5ee79c7bf37a2381117d13d0c/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/10/equation-0.30_0ea811887d0ba75ac46881f50cfadd2784595abd/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/10/simple-0.30_a29b0e902e98e566d53cedfd271bed4b6d06078b/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6d05907a8f6296dbcf3bb6183d89d998d531da2f/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_554a0e0b43f033b93f1c9e04d3bfa725b7276e8c/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_seek_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_seek_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_seek_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_seek_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_seek_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_seek_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_seek_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_seek_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/classes/debug/org/opencv/samples/seek/CrossWalkDetector.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/classes/debug/org/opencv/samples/seek/CrossWalkDetector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/CrossWalkDetector.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/CrossWalkDetector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/split-apk/debug/dep/dependencies.apk" afterPath="$PROJECT_DIR$/seek/build/intermediates/split-apk/debug/dep/dependencies.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/split-apk/debug/slices/slice_4.apk" afterPath="$PROJECT_DIR$/seek/build/intermediates/split-apk/debug/slices/slice_4.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/CrossWalkDetector.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/CrossWalkDetector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/CrossWalkDetector.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/CrossWalkDetector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/zip-cache/yBjKHD7U7hw7ta_xvyHADcR5uOs=" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/zip-cache/yBjKHD7U7hw7ta_xvyHADcR5uOs=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/seek/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/outputs/apk/seek-debug.apk" afterPath="$PROJECT_DIR$/seek/build/outputs/apk/seek-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build.gradle" afterPath="$PROJECT_DIR$/seek/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/instant-run-support/debug/package_dependencies/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/instant-run-support/debug/package_dependencies/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/seek/build/intermediates/restart-dex/debug/build-info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/seek.iml" afterPath="$PROJECT_DIR$/seek/seek.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/CrossWalkDetector.java" afterPath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/CrossWalkDetector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
     </list>
     <ignored path="tutorial-1-camerapreview.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -3237,7 +3227,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
@@ -3245,10 +3235,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />

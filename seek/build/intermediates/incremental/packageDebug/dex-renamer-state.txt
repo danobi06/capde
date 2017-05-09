@@ -1,7 +1,4 @@
-#Mon May 08 21:16:21 EDT 2017
-base.0=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6d05907a8f6296dbcf3bb6183d89d998d531da2f
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_554a0e0b43f033b93f1c9e04d3bfa725b7276e8c/classes.dex
-base.1=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_554a0e0b43f033b93f1c9e04d3bfa725b7276e8c
-file.0=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6d05907a8f6296dbcf3bb6183d89d998d531da2f/classes.dex
+#Tue May 09 01:03:59 EDT 2017
+base.0=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
