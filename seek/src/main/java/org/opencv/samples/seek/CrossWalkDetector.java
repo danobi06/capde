@@ -10,13 +10,8 @@ import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
-import org.openimaj.math.model.fit.RANSAC;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -352,7 +347,7 @@ public class CrossWalkDetector{
         return slope_intercept;
     }
 //    public void _RANSAC(java.util.List<Point> input){
-//        RANSAC model_ransac = new RANSAC(new MultipleLinearRegression(), 100, input.size(), 7, 5 );
+//        RANSAC model_ransac = new RANSAC(new MultipleLinearRegression().clone(), 100, input.size(), 7, 5 );
 //
 //        //convert input to data
 //        //RegressionDataSet train;
@@ -368,18 +363,23 @@ public class CrossWalkDetector{
 //        //return a java.util.List<Point>
 //    }
 
-    public void _RANSAC(java.util.List<Point> input){
-        //create a ransac instance
-        RANSAC model_ransac;
-
-        //fit the data to the ransac instance
-
-        //next after fitting is done get in inliers
-
-        //return the pair of inliers
-
-
-    }
+//    public void _RANSAC(java.util.List<Point> input){
+//        //convert points in input to OpenImaj pixel
+//        java.util.List<IndependentPair<int,int>> pair = new ArrayList<>();
+//
+//        for (int i = 0; i < input.size(); i++) {
+//
+//        }
+//        //create a ransac instance
+//
+//        //fit the data to the ransac instance
+//
+//        //next after fitting is done get in inliers
+//
+//        //return the pair of inliers
+//
+//
+//    }
 
 
     public void process(Mat rgbaImage) {
