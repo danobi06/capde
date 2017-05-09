@@ -2,73 +2,58 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="25"
-    build-mode="FULL"
+    build-mode="COLD"
     density="420dpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1494292561051"
+    timestamp="1494305705918"
     token="6212732236303268699"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="333" />
+        duration="273" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="911" />
+        duration="16" />
     <task
         name="verifier"
-        duration="20" />
+        duration="1" />
 
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
     <artifact
         location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/outputs/apk/seek-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1494292561051"
+        timestamp="1494304180470"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_0.apk"
@@ -80,26 +65,16 @@
             location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/outputs/apk/seek-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1494305705918"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

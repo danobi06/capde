@@ -1,8 +1,12 @@
 package org.opencv.samples.seek;
 
-
 import android.util.Log;
 
+import org.ddogleg.fitting.modelset.DistanceFromModel;
+import org.ddogleg.fitting.modelset.ModelGenerator;
+import org.ddogleg.fitting.modelset.ModelManager;
+import org.ddogleg.fitting.modelset.ModelMatcher;
+import org.ddogleg.fitting.modelset.ransac.Ransac;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
@@ -10,8 +14,8 @@ import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
-
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -316,7 +320,7 @@ public class CrossWalkDetector{
         MatOfPoint matOfPoint = new MatOfPoint();
         //java.util.List<Point> outputLine = new ArrayList<>();
         Mat outLine = new Mat(); //Right bounding line
-        Log.d(TAG, "bLine size: "+bLine.size());
+       // Log.d(TAG, "bLine size: "+bLine.size());
         //matOfPoint.fromList(setRand(bLine)); //mat from random points
         //outputLine = crt(bLine);
         //matOfPoint.fromList(crt(bLine)); //mat from random points
@@ -346,38 +350,77 @@ public class CrossWalkDetector{
 
         return slope_intercept;
     }
-//    public void _RANSAC(java.util.List<Point> input){
-//        RANSAC model_ransac = new RANSAC(new MultipleLinearRegression().clone(), 100, input.size(), 7, 5 );
-//
-//        //convert input to data
-//        //RegressionDataSet train;
-//        //train data set
-//        //return the model that yielded the best test
-//
-//        //get the consensus
-//
-//        //for loop the boolean consensus set
-//
-//        //convert back to Opencv points
-//
-//        //return a java.util.List<Point>
-//    }
+    public java.util.List<Point> toPointCV(java.util.List<Point2D> dogPoints){
+        java.util.List<Point> cvPoint = new ArrayList<>();
+        for (int i = 0; i < dogPoints.size(); i++) {
+            cvPoint.add(new Point(dogPoints.get(i).x,dogPoints.get(i).y));
+        }
+        return cvPoint;
+    }
 
-//    public void _RANSAC(java.util.List<Point> input){
-//        //convert points in input to OpenImaj pixel
-//        java.util.List<IndependentPair<int,int>> pair = new ArrayList<>();
-//
-//        for (int i = 0; i < input.size(); i++) {
-//
+    public java.util.List<Point2D> toPoint2D(java.util.List<Point> cvPoint){
+        java.util.List<Point2D> dogPoint = new ArrayList<>();
+        for (int i = 0; i < cvPoint.size(); i++) {
+            dogPoint.add(new Point2D(cvPoint.get(i).x,cvPoint.get(i).y));
+        }
+        return dogPoint;
+    }
+    public java.util.List<Point> _RANSAC(java.util.List<Point> input){
+
+
+        //Random rand = new Random(234);
+
+        //------------------------ Create Observations
+        // define a line in 2D space as the tangent from the origin
+        //double lineX = -2.1;
+        //double lineY = 1.3;
+        //List<Point2D> points = generateObservations(rand, lineX, lineY);
+
+        List<Point2D> points = toPoint2D(input);
+
+        //------------------------ Compute the solution
+        // Let it know how to compute the model and fit errors
+        ModelManager<Line2D> manager = new LineManager();
+        ModelGenerator<Line2D,Point2D> generator = new LineGenerator();
+        DistanceFromModel<Line2D,Point2D> distance = new DistanceFromLine();
+
+        // RANSAC or LMedS work well here
+        ModelMatcher<Line2D,Point2D> alg =
+                new Ransac<Line2D,Point2D>(234234,manager,generator,distance,500,30);
+//		ModelMatcher<Line2D,Point2D> alg =
+//				new LeastMedianOfSquares<Line2D, Point2D>(234234,100,0.1,0.5,generator,distance);
+
+        if( !alg.process(points) )
+            throw new RuntimeException("Robust fit failed!");
+
+        // let's look at the results
+        Line2D found = alg.getModelParameters();
+
+        // notice how all the noisy points were removed and an accurate line was estimated?
+        //System.out.println("Found line   "+found);
+        //System.out.println("Actual line   x = "+lineX+" y = "+lineY);
+        //System.out.println("Match set size = "+alg.getMatchSet().size());
+
+
+        return toPointCV(alg.getMatchSet());
+    }
+
+//    private static List<Point2D> generateObservations(Random rand, double lineX, double lineY) {
+//        // randomly generate points along the line
+//        List<Point2D> points = new ArrayList<Point2D>();
+//        for( int i = 0; i < 20; i++ ) {
+//            double t = (rand.nextDouble()-0.5)*10;
+//            points.add( new Point2D(lineX + t*lineY, lineY - t*lineX) );
 //        }
-//        //create a ransac instance
 //
-//        //fit the data to the ransac instance
+//        // Add in some random points
+//        for( int i = 0; i < 5; i++ ) {
+//            points.add( new Point2D(rand.nextGaussian()*10,rand.nextGaussian()*10));
+//        }
 //
-//        //next after fitting is done get in inliers
-//
-//        //return the pair of inliers
-//
+//        // Shuffle the list to remove any structure
+//        Collections.shuffle(points);
+//        return points;
 //
 //    }
 
@@ -443,10 +486,25 @@ public class CrossWalkDetector{
             //call crt3
             //java.util.List<java.util.List<Point>> bounds= crt3(rgbaImage, bxbyLeftArray,bxbyRightArray, Bdist);
             //java.util.List<java.util.List<Point>> bounds= crt4(rgbaImage, bxbyLeftArray,bxbyRightArray);
-            java.util.List<java.util.List<Point>> bounds= crt5(rgbaImage, bxbyLeftArray,bxbyRightArray);
+            //java.util.List<java.util.List<Point>> bounds= crt5(rgbaImage, bxbyLeftArray,bxbyRightArray);
 
-            double[] LTline = setBounds(rgbaImage, bounds.get(0)); //line boundary for left points
-            double[] RTline = setBounds(rgbaImage, bounds.get(1)); //line boundary for right points
+            java.util.List<Point> inlierL = _RANSAC(bxbyLeftArray);
+            Log.d(TAG,"inlierLSize: " + inlierL.size());
+            java.util.List<Point> inlierR = _RANSAC(bxbyRightArray);
+            Log.d(TAG,"inlierRSize: " + inlierR.size());
+
+
+            for (int i = 0; i < inlierL.size(); i++) {
+                Imgproc.circle(rgbaImage, inlierL.get(i), 15, new Scalar(244,107,66), 3); //left points
+            }
+            for (int i = 0; i < inlierR.size(); i++) {
+                Imgproc.circle(rgbaImage, inlierR.get(i), 15, new Scalar(250,250,250), 3); //right points
+            }
+
+            //double[] LTline = setBounds(rgbaImage, bounds.get(0)); //line boundary for left points
+            //double[] RTline = setBounds(rgbaImage, bounds.get(1)); //line boundary for right points
+            double[] LTline = setBounds(rgbaImage, inlierL); //line boundary for left points
+            double[] RTline = setBounds(rgbaImage, inlierR); //line boundary for right points
             if (LTline.length > 1 && RTline.length > 1) {
 
 

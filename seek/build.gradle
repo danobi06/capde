@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 dependencies {
     compile project(':openCVLibrary300')
+    compile group: 'org.ddogleg', name: 'ddogleg', version: '0.10'
     //compile group: 'org.openimaj', name: 'core-math', version: '1.3.5'
     //compile 'com.android.support:multidex:1.0.1'
     //compile group: 'com.edwardraff', name: 'JSAT', version: '0.0.7'

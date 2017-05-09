@@ -1,4 +1,19 @@
-#Mon May 08 21:16:19 EDT 2017
-base.0=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d9319853a4cdfbd36bcf3e6ab61dbc129a5b2be2
-renamed.0=classes.dex
-file.0=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d9319853a4cdfbd36bcf3e6ab61dbc129a5b2be2/classes.dex
+#Tue May 09 00:29:57 EDT 2017
+renamed.5=classes2.dex
+renamed.4=classes.dex
+renamed.3=classes6.dex
+renamed.2=classes4.dex
+renamed.1=classes5.dex
+renamed.0=classes3.dex
+base.5=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/core-0.30_355167f660a52f87d1a305fa0d40a2f6943eb679
+base.4=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d9319853a4cdfbd36bcf3e6ab61dbc129a5b2be2
+base.3=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/simple-0.30_a29b0e902e98e566d53cedfd271bed4b6d06078b
+base.2=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/dense64-0.30_ce5d3e2863ce01d5ee79c7bf37a2381117d13d0c
+base.1=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/equation-0.30_0ea811887d0ba75ac46881f50cfadd2784595abd
+base.0=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/ddogleg-0.10_508628bd66cdc17c90ac16df7b5ba7b4e5f76b18
+file.5=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/core-0.30_355167f660a52f87d1a305fa0d40a2f6943eb679/classes.dex
+file.4=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d9319853a4cdfbd36bcf3e6ab61dbc129a5b2be2/classes.dex
+file.3=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/simple-0.30_a29b0e902e98e566d53cedfd271bed4b6d06078b/classes.dex
+file.2=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/dense64-0.30_ce5d3e2863ce01d5ee79c7bf37a2381117d13d0c/classes.dex
+file.1=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/equation-0.30_0ea811887d0ba75ac46881f50cfadd2784595abd/classes.dex
+file.0=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/ddogleg-0.10_508628bd66cdc17c90ac16df7b5ba7b4e5f76b18/classes.dex

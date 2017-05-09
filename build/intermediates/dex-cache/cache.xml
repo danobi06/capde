@@ -3,6 +3,33 @@
 
     <item
         is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.ejml/simple/0.30/db02b4357af778950d9b0d8652b3bb4af785d999/simple-0.30.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db02b4357af778950d9b0d8652b3bb4af785d999">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/simple-0.30_a29b0e902e98e566d53cedfd271bed4b6d06078b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.ejml/equation/0.30/8b676f156cdcbac572249f303dee710bffa94020/equation-0.30.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8b676f156cdcbac572249f303dee710bffa94020">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/equation-0.30_0ea811887d0ba75ac46881f50cfadd2784595abd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.ejml/dense64/0.30/480f1c2838c2998c7e9be4491ef689d590a838b9/dense64-0.30.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="480f1c2838c2998c7e9be4491ef689d590a838b9">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/dense64-0.30_ce5d3e2863ce01d5ee79c7bf37a2381117d13d0c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/dobi/.android/build-cache/4957c53247f45a1b399c6fa3b7a3b849b716906f/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -12,12 +39,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.ejml/core/0.30/79f5269e95262f6b81b84b04b2c355b0704ac9fe/core-0.30.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="79f5269e95262f6b81b84b04b2c355b0704ac9fe">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/core-0.30_355167f660a52f87d1a305fa0d40a2f6943eb679/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
         <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_554a0e0b43f033b93f1c9e04d3bfa725b7276e8c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dobi/.gradle/caches/modules-2/files-2.1/org.ddogleg/ddogleg/0.10/ee8c6881eba48da70f1264f4de09e6181844f649/ddogleg-0.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee8c6881eba48da70f1264f4de09e6181844f649">
+        <dex dex="/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10/ddogleg-0.10_508628bd66cdc17c90ac16df7b5ba7b4e5f76b18/classes.dex" />
     </item>
     <item
         is-multidex="true"

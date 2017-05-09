@@ -104,7 +104,12 @@
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="core-0.30" level="project" />
+    <orderEntry type="library" exported="" name="equation-0.30" level="project" />
     <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="dense64-0.30" level="project" />
+    <orderEntry type="library" exported="" name="ddogleg-0.10" level="project" />
+    <orderEntry type="library" exported="" name="simple-0.30" level="project" />
     <orderEntry type="module" module-name="openCVLibrary300" exported="" />
   </component>
 </module>
