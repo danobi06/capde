@@ -7,18 +7,18 @@ import org.ddogleg.fitting.modelset.ModelGenerator;
 import org.ddogleg.fitting.modelset.ModelManager;
 import org.ddogleg.fitting.modelset.ModelMatcher;
 import org.ddogleg.fitting.modelset.ransac.Ransac;
+import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
+import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by dobi on 4/12/17.
@@ -30,51 +30,42 @@ public class CrossWalkDetector{
 
     /* Local Variables */
     double thresh = 150; //optimal 150
-    int bw_width = 300; //#170
+    int radius = 150;
+    long count = 0;
+    //int bw_width = 300; //#170
 
     //Cache
     //Mat rgbaImage = new Mat(); //image to process
     Mat mGray = new Mat(); //grey Scale
+    Mat mBlur = new Mat(); //gaussian blur
+    Mat mMask = new Mat(); //mask
+    Mat th2 = new Mat(); //threshold
+    Mat erode = new Mat();
+    Mat horizontal = new Mat();
+
+
+
     Mat mThresh1 = new Mat();
     Mat mEdges = new Mat();
     Mat mHierarchy = new Mat();
-    java.util.List<Double> Bdist = new ArrayList<>();
-
-
-    java.util.List<Integer> bxLeft = new ArrayList<>();
-    java.util.List<Integer> byLeft = new ArrayList<>();
-    java.util.List<Integer> bxRight = new ArrayList<>();
-    java.util.List<Integer> byRight = new ArrayList<>();
+//
+//    java.util.List<Integer> bxLeft = new ArrayList<>();
+//    java.util.List<Integer> byLeft = new ArrayList<>();
+//    java.util.List<Integer> bxRight = new ArrayList<>();
+//    java.util.List<Integer> byRight = new ArrayList<>();
 
     //lineCalc
-//    public double[] lineCalc(double vx, double vy, double x0, double y0 ){
-//        double scale =10;
-//        double x1 = x0+scale*vx;
-//        double y1 = y0+scale*vy;
-//        double m = (y1-y0)/(x1-x0);
-//        double b = y1-m*x1;
-//
-//        double val[] = {m,b};
-//        return val;
-//
-//    }
+    public double[] lineCalc(double vx, double vy, double x0, double y0 ){
+        double scale =10;
+        double x1 = x0+scale*vx;
+        double y1 = y0+scale*vy;
+        double m = (y1-y0)/(x1-x0);
+        double b = y1-m*x1;
 
-//    //angle
-//    public double angle(Point pt1, Point pt2){
-//        double x1 = pt1.x;
-//        double y1 = pt1.y;
-//
-//        double x2 = pt2.x;
-//        double y2 = pt2.y;
-//
-//        double inner_product = x1*x2 + y1*y2;
-//        double len1 = Math.hypot(x1, y1);
-//        double len2 = Math.hypot(x2, y2);
-//
-//        double a=Math.acos(inner_product/(len1*len2));
-//        return a*180/Math.PI;
-//
-//    }
+        double val[] = {m,b};
+        return val;
+
+    }
 
     //lineIntersect
     public double[] lineIntersect(double m1,double b1, double m2, double b2){
@@ -96,259 +87,52 @@ public class CrossWalkDetector{
         return val;
 
     }
-//    /* returns a list of median distance from a list of points */
-//    private double xdiff(java.util.List<Point>  input){
-//        java.util.List<Double> xvals = new ArrayList<>();
-//
-//        Log.d(TAG,"calculating median");
-//        for (int i = 0; i < input.size() ; i++) {
-//            xvals.add(input.get(i).x);
-//        }
-//        Collections.sort(xvals);
-//        double median = xvals.get(xvals.size()/2);
-//
-//        return median;
-//    }
-//    /* returns a list of median distance from a list of points */
-//    private double med(java.util.List<Double>  input){
-//        Log.d(TAG,"calculating median");
-//        Collections.sort(input);
-//        double median = input.get(input.size()/2);
-//
-//        return median;
-//    }
-//    /* returns a average from a list of points */
-//    private Point avg(java.util.List<Point> input){
-//        Log.d(TAG,"calculating average");
-//        int sumx = 0;
-//        int sumy = 0;
-//        for (int i = 0; i < input.size(); i++) {
-//            sumx += input.get(i).x;
-//            sumy += input.get(i).y;
-//        }
-//        double x = sumx/input.size();
-//        double y = sumy/input.size();
-//        Log.d(TAG,"Point Average " + "("+ x + ", "+ y + ")");
-//
-//        return new Point(x,y);
-//    }
-    /* returns a average from a list of points */
-    private double avgx(java.util.List<Point> input){
-        Log.d(TAG,"calculating average");
-        int sumx = 0;
-        for (int i = 0; i < input.size(); i++) {
-            sumx += input.get(i).x;
-        }
-        double x = sumx/input.size();
-        return x;
-    }
-    /* returns a average from a list of points */
-//    private Point avg2(java.util.List<Point> inputL, java.util.List<Point> inputR){
-//        Log.d(TAG,"calculating average of all the lengths");
-//        int sumx = 0;
-//        int sumy = 0;
-//        for (int i = 0; i < inputL.size(); i++) {
-//            sumx += inputL.get(i).x;
-//            sumy += input.get(i).y;
-//        }
-//        double x = sumx/input.size();
-//        double y = sumy/input.size();
-//        Log.d(TAG,"Point Average " + "("+ x + ", "+ y + ")");
-//
-//        return new Point(x,y);
-//    }
-    /* returns a list of closely related points */
-//    private java.util.List crt(java.util.List<Point> input){
-//        Log.d(TAG,"CRT");
-//        java.util.List<Point> Output = new ArrayList<>();
-//        Point avg = avg(input);
-//        double x1 = avg.x;
-//        double y1 = avg.y;
-//
-//
-//        for (int i = 0; i < input.size(); i++) { //7 random points
-//            double x2 = input.get(i).x;
-//            double y2 = input.get(i).y;
-//            Log.d(TAG,"Point " + "("+ x2 + ", "+ y2 + ")");
-//            double distance = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
-//            Log.d(TAG,"Distance is: "+ distance);
-//            if(distance <= 950){
-//                Output.add(input.get(i));
-//            }
-//        }
-//        Log.d(TAG, "Output size: "+Output.size());
-//        return Output;
-//    }
-//    /* returns a list of closely related points */
-//    private java.util.List<java.util.List<Point>> crt3(Mat img, java.util.List<Point> leftBound, java.util.List<Point> rightBound, java.util.List<Double>  distList){
-//        Log.d(TAG,"CRT2");
-//        java.util.List<Point> outputL = new ArrayList<>();
-//        java.util.List<Point> outputR = new ArrayList<>();
-//
-//        int medDist = (int)med(distList);
-//        Log.d(TAG,"Median Dist: " + medDist);
-//        for (int i = 0; i < leftBound.size(); i++) { //7 random points
-//            double x1 = leftBound.get(i).x;
-//            double y1 = leftBound.get(i).y;
-//            double x2 = rightBound.get(i).x;
-//            double y2 = rightBound.get(i).y;
-//            Log.d(TAG,"Point1 " + "("+ x1 + ", "+ y1 + ")");
-//            Log.d(TAG,"Point2 " + "("+ x2 + ", "+ y2 + ")");
-//            double dist = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
-//            Log.d(TAG,"Point Dist: "+ dist);
-//            if((int)dist >= medDist - (medDist/4) && (int)dist <= medDist + (medDist/4)){
-//                Log.d(TAG,"KEPT: "+ dist);
-//                outputL.add(leftBound.get(i));
-//                outputR.add(rightBound.get(i));
-//                Imgproc.circle(img, leftBound.get(i), 10, new Scalar(100,100,250), 2); //left points
-//                Imgproc.circle(img, rightBound.get(i), 10,  new Scalar(250,250,250), 2); //right points
-//            }
-//        }
-//        java.util.List<java.util.List<Point>> list = new ArrayList<>();
-//        list.add(outputL);
-//        list.add(outputR);
-//        return list;
-//    }
-//    /* returns a list of closely related points */
-//    private java.util.List<java.util.List<Point>> crt2(Mat img, java.util.List<Point> leftBound, java.util.List<Point> rightBound, int avgdist){
-//        Log.d(TAG,"CRT2");
-//        java.util.List<Point> outputL = new ArrayList<>();
-//        java.util.List<Point> outputR = new ArrayList<>();
-//
-//        for (int i = 0; i < leftBound.size(); i++) { //7 random points
-//            double x1 = leftBound.get(i).x;
-//            double y1 = leftBound.get(i).y;
-//            double x2 = rightBound.get(i).x;
-//            double y2 = rightBound.get(i).y;
-//            Log.d(TAG,"Point1 " + "("+ x1 + ", "+ y1 + ")");
-//            Log.d(TAG,"Point2 " + "("+ x2 + ", "+ y2 + ")");
-//            double dist = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
-//            Log.d(TAG,"Point Dist: "+ dist);
-//            if((int)dist >= avgdist + (avgdist/6)){
-//                outputL.add(leftBound.get(i));
-//                outputR.add(rightBound.get(i));
-//                Imgproc.circle(img, leftBound.get(i), 10, new Scalar(100,100,250), 2); //left points
-//                Imgproc.circle(img, rightBound.get(i), 10,  new Scalar(250,250,250), 2); //right points
-//            }
-//        }
-//        java.util.List<java.util.List<Point>> list = new ArrayList<>();
-//        list.add(outputL);
-//        list.add(outputR);
-//        return list;
-//    }
-//    /* returns a list of closely related points */
-//    private java.util.List<java.util.List<Point>> crt4(Mat img, java.util.List<Point> leftBound, java.util.List<Point> rightBound){
-//        Log.d(TAG,"CRT4");
-//        java.util.List<Point> outputL = new ArrayList<>();
-//        java.util.List<Point> outputR = new ArrayList<>();
-//
-//        int x1med = (int)xdiff(leftBound);
-//        int x2med = (int)xdiff(rightBound);
-//        Log.d(TAG,"x1med: " + x1med);
-//        Log.d(TAG,"x2med: " + x2med);
-//
-//        for (int i = 0; i < leftBound.size(); i++) { //7 random points
-//            double x1 = leftBound.get(i).x;
-//            double y1 = leftBound.get(i).y;
-//            double x2 = rightBound.get(i).x;
-//            double y2 = rightBound.get(i).y;
-//            Log.d(TAG,"Point1 " + "("+ x1 + ", "+ y1 + ")");
-//            Log.d(TAG,"Point2 " + "("+ x2 + ", "+ y2 + ")");
-//            //double dist = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
-//            //Log.d(TAG,"Point Dist: "+ dist);
-//            if((x1 >= (x1med - (x1med/5))) && (x1 <= (x1med + (x1med/5))) && (x2 >= (x2med - (x2med/5))) && (x2 <= (x2med + (x2med/5)))  ){
-//                Log.d(TAG,"KEPT: Point1 " + "("+ x1 + ", "+ y1 + ")");
-//                Log.d(TAG,"KEPT: Point2 " + "("+ x2 + ", "+ y2 + ")");
-//                outputL.add(leftBound.get(i));
-//                outputR.add(rightBound.get(i));
-//                Imgproc.circle(img, leftBound.get(i), 15, new Scalar(244,107,66), 3); //left points
-//                Imgproc.circle(img, rightBound.get(i), 15,  new Scalar(250,250,250), 3); //right points
-//            }
-//        }
-//        java.util.List<java.util.List<Point>> list = new ArrayList<>();
-//        list.add(outputL);
-//        list.add(outputR);
-//        return list;
-//    }
-//    /* returns a list of closely related points */
-    private java.util.List<java.util.List<Point>> crt5(Mat img, java.util.List<Point> leftBound, java.util.List<Point> rightBound){
-        Log.d(TAG,"CRT4");
-        java.util.List<Point> outputL = new ArrayList<>();
-        java.util.List<Point> outputR = new ArrayList<>();
 
-        int x1avg = (int)avgx(leftBound);
-        int x2avg = (int)avgx(rightBound);
-        Log.d(TAG,"x1avg: " + x1avg);
-        Log.d(TAG,"xavg: " + x2avg);
-
-        for (int i = 0; i < leftBound.size(); i++) { //7 random points
-            double x1 = leftBound.get(i).x;
-            double y1 = leftBound.get(i).y;
-            double x2 = rightBound.get(i).x;
-            double y2 = rightBound.get(i).y;
-            Log.d(TAG,"Point1 " + "("+ x1 + ", "+ y1 + ")");
-            Log.d(TAG,"Point2 " + "("+ x2 + ", "+ y2 + ")");
-            //double dist = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
-            //Log.d(TAG,"Point Dist: "+ dist);
-            if((x1 >= (x1avg - (x1avg/5))) && (x1 <= (x1avg + (x1avg/5))) && (x2 >= (x2avg - (x2avg/5))) && (x2 <= (x2avg + (x2avg/5)))  ){
-                Log.d(TAG,"KEPT: Point1 " + "("+ x1 + ", "+ y1 + ")");
-                Log.d(TAG,"KEPT: Point2 " + "("+ x2 + ", "+ y2 + ")");
-                outputL.add(leftBound.get(i));
-                outputR.add(rightBound.get(i));
-                Imgproc.circle(img, leftBound.get(i), 15, new Scalar(244,107,66), 3); //left points
-                Imgproc.circle(img, rightBound.get(i), 15,  new Scalar(250,250,250), 3); //right points
-            }
-        }
-        java.util.List<java.util.List<Point>> list = new ArrayList<>();
-        list.add(outputL);
-        list.add(outputR);
-        return list;
-    }
-    /* returns a list of random points */
-    private java.util.List setRand(java.util.List<Point> input){
-        Log.d(TAG,"randomizing boundaries");
-        java.util.List<Point> randOutput = new ArrayList<>();
-
-        for (int i = 0; i < input.size()/2; i++) { //7 random points
-            randOutput.add(input.get(new Random().nextInt(input.size())));
-        }
-
-        return randOutput;
-    }
+//    /* returns a list of random points */
+//    private java.util.List setRand(java.util.List<Point> input){
+//        Log.d(TAG,"randomizing boundaries");
+//        java.util.List<Point> randOutput = new ArrayList<>();
+//
+//        for (int i = 0; i < input.size()/2; i++) { //7 random points
+//            randOutput.add(input.get(new Random().nextInt(input.size())));
+//        }
+//
+//        return randOutput;
+//    }
     /* sets the bounds for the crosswalk */
     private double[] setBounds(Mat img, java.util.List<Point> bLine){
         MatOfPoint matOfPoint = new MatOfPoint();
         //java.util.List<Point> outputLine = new ArrayList<>();
         Mat outLine = new Mat(); //Right bounding line
-       // Log.d(TAG, "bLine size: "+bLine.size());
-        //matOfPoint.fromList(setRand(bLine)); //mat from random points
-        //outputLine = crt(bLine);
-        //matOfPoint.fromList(crt(bLine)); //mat from random points
-//        if (outputLine.size() < 2){
-//            //matOfPoint.fromList(bLine); //mat from all points
-//            double[] empty = {};
-//            return empty;
-//
-//        }
-//        matOfPoint.fromList(outputLine); //mat from random points
 
         matOfPoint.fromList(bLine); //mat from all points
 
         /*relase bLine */
-        Imgproc.fitLine(matOfPoint, outLine, Imgproc.DIST_L2, 0,0.5,0.5);
+        Imgproc.fitLine(matOfPoint, outLine, Imgproc.DIST_L2, 0,0.01,0.01);
+
 
         double[] p_1 = outLine.get(0,0);//normalized direction x
         double[] p_2 = outLine.get(1,0);//normalized direction y
         double[] p_3 = outLine.get(2,0);//point on line x
         double[] p_4 = outLine.get(3,0);//point on line y
-        double LTlineL = (-p_3[0]) * (p_1[0]/p_2[0]) + p_4[0];
-        double LTlineR = (img.cols() - p_3[0]) * (p_1[0]/p_2[0]) + p_4[0];
 
-        double slope = (LTlineL-LTlineR)/(0-img.cols());
-        double intercept = LTlineR - (slope * img.cols());
-        double[] slope_intercept = {slope, intercept};
+//        Log.d(TAG,"Outline size: "+outLine.size());
+//
+//        Log.d(TAG,"Direction X: "+p_1[0]);
+//        Log.d(TAG,"Direction X size: "+p_1.length);
+//
+//        Log.d(TAG,"Direction Y: "+p_2[0]);
+//        Log.d(TAG,"Direction Y size: "+p_2.length);
+//
+//        Log.d(TAG,"point on line x: "+p_3[0]);
+//        Log.d(TAG,"point on line x size: "+p_3.length);
+//
+//        Log.d(TAG,"Point on line Y: "+p_4[0]);
+//        Log.d(TAG,"Point on line Y size: "+p_4.length);
+//
+        double vals[] = {p_1[0],p_2[0],p_3[0],p_4[0]};
 
-        return slope_intercept;
+        return vals;
     }
     public java.util.List<Point> toPointCV(java.util.List<Point2D> dogPoints){
         java.util.List<Point> cvPoint = new ArrayList<>();
@@ -367,15 +151,6 @@ public class CrossWalkDetector{
     }
     public java.util.List<Point> _RANSAC(java.util.List<Point> input){
 
-
-        //Random rand = new Random(234);
-
-        //------------------------ Create Observations
-        // define a line in 2D space as the tangent from the origin
-        //double lineX = -2.1;
-        //double lineY = 1.3;
-        //List<Point2D> points = generateObservations(rand, lineX, lineY);
-
         List<Point2D> points = toPoint2D(input);
 
         //------------------------ Compute the solution
@@ -386,64 +161,61 @@ public class CrossWalkDetector{
 
         // RANSAC or LMedS work well here
         ModelMatcher<Line2D,Point2D> alg =
-                new Ransac<Line2D,Point2D>(234234,manager,generator,distance,500,30);
-//		ModelMatcher<Line2D,Point2D> alg =
-//				new LeastMedianOfSquares<Line2D, Point2D>(234234,100,0.1,0.5,generator,distance);
+                new Ransac<Line2D,Point2D>(234234,manager,generator,distance,200,10);
 
         if( !alg.process(points) )
             throw new RuntimeException("Robust fit failed!");
-
         // let's look at the results
         Line2D found = alg.getModelParameters();
 
-        // notice how all the noisy points were removed and an accurate line was estimated?
-        //System.out.println("Found line   "+found);
-        //System.out.println("Actual line   x = "+lineX+" y = "+lineY);
-        //System.out.println("Match set size = "+alg.getMatchSet().size());
-
-
         return toPointCV(alg.getMatchSet());
     }
-
-//    private static List<Point2D> generateObservations(Random rand, double lineX, double lineY) {
-//        // randomly generate points along the line
-//        List<Point2D> points = new ArrayList<Point2D>();
-//        for( int i = 0; i < 20; i++ ) {
-//            double t = (rand.nextDouble()-0.5)*10;
-//            points.add( new Point2D(lineX + t*lineY, lineY - t*lineX) );
-//        }
-//
-//        // Add in some random points
-//        for( int i = 0; i < 5; i++ ) {
-//            points.add( new Point2D(rand.nextGaussian()*10,rand.nextGaussian()*10));
-//        }
-//
-//        // Shuffle the list to remove any structure
-//        Collections.shuffle(points);
-//        return points;
-//
-//    }
-
 
     public void process(Mat rgbaImage) {
         java.util.List<Point> bxbyLeftArray = new ArrayList<>();
         java.util.List<Point> bxbyRightArray = new ArrayList<>();
 
-  /* Gray scale */
-        Imgproc.cvtColor(rgbaImage, mGray, Imgproc.COLOR_RGB2GRAY);
-
-    /*Threshold 1 */
-        Imgproc.threshold(mGray, mThresh1, thresh, 255, 0);
+//  /* Gray scale */
+        Imgproc.cvtColor(rgbaImage, mGray, Imgproc.COLOR_BGR2GRAY);
+        Imgproc.GaussianBlur(mGray, mBlur,new Size(5,5),0);
         mGray.release();
+        Core.inRange(mBlur, new Scalar(170,170,170), new Scalar(255,255,255), mMask);
+        mBlur.release();
+////
+//////    /*Threshold 1 */
+////        Imgproc.threshold(mGray, mThresh1, thresh, 255, 0);
+////        mGray.release();
+////
+////        Imgproc.Sobel(mThresh1, mEdges, CvType.CV_8U, 0,1);
+////
+//////    /* findContours */
+//        List<MatOfPoint> contours = new ArrayList<>();
+////        /* TODO
+////         limit contour size */
+//        Imgproc.findContours(mEdges, contours, mHierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
+//        mEdges.release();
+//
 
-        Imgproc.Sobel(mThresh1, mEdges, CvType.CV_8U, 0,1);
 
-    /* findContours */
+        Imgproc.adaptiveThreshold(mMask, th2, 255, Imgproc.ADAPTIVE_THRESH_MEAN_C,Imgproc.THRESH_BINARY,15,-2);
+        mMask.release();
+        Log.d(TAG,"copied threshold");
+
+        int cols = th2.cols();
+
+        int horizontalsize = cols / 30;
+
+        Mat horizontalStructure = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(horizontalsize, 1));
+        Log.d(TAG,"got structuring element: "+ horizontalStructure);
+
+        Imgproc.erode(th2, erode, horizontalStructure);
+        th2.release();
+
         List<MatOfPoint> contours = new ArrayList<>();
-        /* TODO
-         limit contour size */
-        Imgproc.findContours(mEdges, contours, mHierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
-        mEdges.release();
+
+        Imgproc.findContours(erode, contours, mHierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
+        Log.d(TAG,"found contours");
+
         /*** draw lines ***/
         Scalar tealCircle = new Scalar(0, 255, 255);
         Scalar yellowCircle = new Scalar(255, 255, 0);
@@ -454,7 +226,6 @@ public class CrossWalkDetector{
         while(each.hasNext()){
             wrapper = each.next();
             rect = Imgproc.boundingRect(wrapper);
-            //if (rect.width > bw_width){
 
             if (rect.width >= rgbaImage.width() - (rgbaImage.width()*.75)){ //rect with should be 1/4 or greater then the screen width
                 Point LBP = new Point(rect.x, rect.y); //left bound point
@@ -462,8 +233,6 @@ public class CrossWalkDetector{
                 bxbyLeftArray.add(LBP); //points for left line segment
                 bxbyRightArray.add(RBP); //points for right lines segment
 
-                //double dist = Math.sqrt(Math.pow((RBP.x-LBP.x),2) + Math.pow((RBP.y-LBP.y),2));
-               // Bdist.add(dist);
                 Imgproc.line(rgbaImage, new Point(rect.x, rect.y), new Point((rect.x + rect.width), rect.y), lineColor,2);
                 Imgproc.circle(rgbaImage, new Point(rect.x, rect.y), 10, yellowCircle, 4);
                 Imgproc.circle(rgbaImage, new Point((rect.x + rect.width), rect.y), 10, tealCircle, 4);
@@ -473,20 +242,6 @@ public class CrossWalkDetector{
         if(bxbyLeftArray.size() >=7){
             Scalar boundColor = new Scalar(0, 0, 255);
             Scalar intersectColor = new Scalar(255,0,0);
-            //Calculate average of the distance
-//            int sum = 0;
-//            for (int i = 0; i <Bdist.size() ; i++) {
-//                sum += Bdist.get(i);
-//            }
-            ///int avgDist = sum/Bdist.size();
-            //Log.d(TAG,"avgDist is: "+avgDist);
-            //call crt2 to remove points that don't match dist
-            //java.util.List<java.util.List<Point>> bounds= crt2(rgbaImage, bxbyLeftArray,bxbyRightArray, avgDist);
-
-            //call crt3
-            //java.util.List<java.util.List<Point>> bounds= crt3(rgbaImage, bxbyLeftArray,bxbyRightArray, Bdist);
-            //java.util.List<java.util.List<Point>> bounds= crt4(rgbaImage, bxbyLeftArray,bxbyRightArray);
-            //java.util.List<java.util.List<Point>> bounds= crt5(rgbaImage, bxbyLeftArray,bxbyRightArray);
 
             java.util.List<Point> inlierL = _RANSAC(bxbyLeftArray);
             Log.d(TAG,"inlierLSize: " + inlierL.size());
@@ -496,9 +251,13 @@ public class CrossWalkDetector{
 
             for (int i = 0; i < inlierL.size(); i++) {
                 Imgproc.circle(rgbaImage, inlierL.get(i), 15, new Scalar(244,107,66), 3); //left points
+
+                    Log.d(TAG,"InlierL " + "("+ inlierL.get(i).x + ", "+ inlierL.get(i).y + ")");
             }
             for (int i = 0; i < inlierR.size(); i++) {
                 Imgproc.circle(rgbaImage, inlierR.get(i), 15, new Scalar(250,250,250), 3); //right points
+                Log.d(TAG,"InlierR " + "("+ inlierR.get(i).x + ", "+ inlierR.get(i).y + ")");
+
             }
 
             //double[] LTline = setBounds(rgbaImage, bounds.get(0)); //line boundary for left points
@@ -507,17 +266,36 @@ public class CrossWalkDetector{
             double[] RTline = setBounds(rgbaImage, inlierR); //line boundary for right points
             if (LTline.length > 1 && RTline.length > 1) {
 
+//                Log.d(TAG,"about to get bounds ");
+                double vx = LTline[0];
+                double vy = LTline[1];
+                double x0 = LTline[2];
+                double y0 = LTline[3];
+//                Log.d(TAG,"Left Bound Values ");
 
-                double m1 = LTline[0]; //slope left line
-                double b1 = LTline[1]; //intersect right line
-                double m2 = RTline[0]; //slope left line
-                double b2 = RTline[1]; //intersect right line
 
-                Imgproc.line(rgbaImage, new Point((0 - b1) / m1, 0), new Point((rgbaImage.height() - b1) / m1, rgbaImage.height()), boundColor, 3);
-                Imgproc.line(rgbaImage, new Point((0 - b2) / m2, 0), new Point((rgbaImage.height() - b2) / m2, rgbaImage.height()), boundColor, 3);
+                double vx_R = RTline[0];
+                double vy_R = RTline[1];
+                double x0_R = RTline[2];
+                double y0_R = RTline[3];
+//                Log.d(TAG,"Right Bound Values ");
 
-                double[] intersect = lineIntersect(m2, b2, m1, b1);
+                int m = radius*10;
+
+//                Log.d(TAG,"drawing bounds");
+
+                Imgproc.line(rgbaImage, new Point(x0-m*vx, y0-m*vy), new Point(x0+m*vx, y0+m*vy), boundColor, 3);
+                Imgproc.line(rgbaImage, new Point(x0_R-m*vx_R, y0_R-m*vy_R), new Point(x0_R+m*vx_R, y0_R+m*vy_R), boundColor, 3);
+
+                double mbL[] =lineCalc(vx, vy, x0, y0);
+
+                double mbR[] =lineCalc(vx_R, vy_R, x0_R, y0_R);
+
+                double[] intersect = lineIntersect(mbR[0], mbR[1], mbL[0], mbL[1]);
+
                 Imgproc.circle(rgbaImage, new Point((int) intersect[0], (int) intersect[1]), 10, intersectColor, 15);
+                //count++;
+                //Log.d(TAG, "Count Num: " + count);
             }
 
         }

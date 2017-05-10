@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.multidex.MultiDex;
 import android.util.Log;
 import android.view.SurfaceView;
+import android.view.View;
 import android.view.WindowManager;
 import org.opencv.android.JavaCameraView;
 import org.opencv.android.BaseLoaderCallback;
@@ -66,6 +67,11 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
 
     }
 
+    /** Called when the user taps the Send button */
+    public void startProcessing(View view) {
+        // Do something in response to button
+    }
+
     @Override
     public void onPause()
     {
@@ -100,6 +106,7 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
     public void onCameraViewStarted(int width, int height) {
         Log.d(TAG, "onCameraViewStarted");
         mRgba = new Mat(height, width, CvType.CV_8UC4);
+        //mRgba = new Mat(width, height, CvType.CV_8UC4);
         //mRgba = new Mat(320, 220, CvType.CV_8UC4);
         mDetector = new CrossWalkDetector();
     }

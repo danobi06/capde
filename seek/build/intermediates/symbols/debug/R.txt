@@ -3,9 +3,11 @@ int attr show_fps 0x7f010000
 int drawable icon 0x7f020000
 int id any 0x7f060000
 int id back 0x7f060001
+int id button 0x7f060003
 int id front 0x7f060002
-int id main_activity_java_surface_view 0x7f060003
-int layout main_surface_view 0x7f040000
+int id main_activity_java_surface_view 0x7f060004
+int layout homescreen 0x7f040000
+int layout main_surface_view 0x7f040001
 int mipmap ic_launcher 0x7f030000
 int string app_name 0x7f050000
 int[] styleable CameraBridgeViewBase { 0x7f010000, 0x7f010001 }
