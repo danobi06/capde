@@ -41,7 +41,7 @@ public class CrossWalkDetector{
     Mat mMask = new Mat(); //mask
     Mat th2 = new Mat(); //threshold
     Mat erode = new Mat();
-    Mat horizontal = new Mat();
+//    Mat horizontal = new Mat();
 
 
 
@@ -197,24 +197,26 @@ public class CrossWalkDetector{
 //
 
 
-        Imgproc.adaptiveThreshold(mMask, th2, 255, Imgproc.ADAPTIVE_THRESH_MEAN_C,Imgproc.THRESH_BINARY,15,-2);
-        mMask.release();
+//        Imgproc.adaptiveThreshold(mMask, th2, 255, Imgproc.ADAPTIVE_THRESH_MEAN_C,Imgproc.THRESH_BINARY,15,-2);
         Log.d(TAG,"copied threshold");
 
-        int cols = th2.cols();
+        int cols = mMask.cols();
 
         int horizontalsize = cols / 30;
 
         Mat horizontalStructure = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(horizontalsize, 1));
         Log.d(TAG,"got structuring element: "+ horizontalStructure);
 
-        Imgproc.erode(th2, erode, horizontalStructure);
-        th2.release();
+        Imgproc.erode(mMask, erode, horizontalStructure);
+        mMask.release();
+
+//        Imgproc.Sobel(mMask, mEdges, CvType.CV_8U, 0,1);
 
         List<MatOfPoint> contours = new ArrayList<>();
 
         Imgproc.findContours(erode, contours, mHierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
         Log.d(TAG,"found contours");
+        erode.release();
 
         /*** draw lines ***/
         Scalar tealCircle = new Scalar(0, 255, 255);

@@ -105,8 +105,8 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
 
     public void onCameraViewStarted(int width, int height) {
         Log.d(TAG, "onCameraViewStarted");
-        mRgba = new Mat(height, width, CvType.CV_8UC4);
-        //mRgba = new Mat(width, height, CvType.CV_8UC4);
+        //mRgba = new Mat(height, width, CvType.CV_8UC4);
+        mRgba = new Mat(width, height, CvType.CV_8UC4);
         //mRgba = new Mat(320, 220, CvType.CV_8UC4);
         mDetector = new CrossWalkDetector();
     }
