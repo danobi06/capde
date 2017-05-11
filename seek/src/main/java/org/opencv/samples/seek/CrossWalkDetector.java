@@ -241,7 +241,7 @@ public class CrossWalkDetector{
             }
         }
 
-        if(bxbyLeftArray.size() >=7){
+        if(bxbyLeftArray.size() >=3 && bxbyRightArray.size() >= 3){
             Scalar boundColor = new Scalar(0, 0, 255);
             Scalar intersectColor = new Scalar(255,0,0);
 
