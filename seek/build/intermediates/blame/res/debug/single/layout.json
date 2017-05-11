@@ -2,9 +2,5 @@
     {
         "merged": "/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/merged/debug/layout/main_surface_view.xml",
         "source": "/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/res/layout/main_surface_view.xml"
-    },
-    {
-        "merged": "/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/merged/debug/layout/homescreen.xml",
-        "source": "/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/src/main/res/layout/homescreen.xml"
     }
 ]

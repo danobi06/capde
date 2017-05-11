@@ -42,13 +42,11 @@ containing a value of this type.
     public static final class id {
         public static final int any=0x7f060000;
         public static final int back=0x7f060001;
-        public static final int button=0x7f060003;
         public static final int front=0x7f060002;
-        public static final int main_activity_java_surface_view=0x7f060004;
+        public static final int main_activity_java_surface_view=0x7f060003;
     }
     public static final class layout {
-        public static final int homescreen=0x7f040000;
-        public static final int main_surface_view=0x7f040001;
+        public static final int main_surface_view=0x7f040000;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;

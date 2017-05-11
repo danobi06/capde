@@ -66,11 +66,11 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
         mOpenCvCameraView.setMaxFrameSize(1280, 720);
 
     }
-
-    /** Called when the user taps the Send button */
-    public void startProcessing(View view) {
-        // Do something in response to button
-    }
+//
+//    /** Called when the user taps the Send button */
+//    public void startProcessing(View view) {
+//        // Do something in response to button
+//    }
 
     @Override
     public void onPause()
