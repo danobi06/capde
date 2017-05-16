@@ -1,11 +1,11 @@
 #Internal package file, do not edit.
-#Tue May 16 00:54:41 EDT 2017
+#Tue May 16 12:22:21 EDT 2017
 8.set=NATIVE_RESOURCE
 1.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main
 1.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/armeabi-v7a/libopencv_java3.so
 3.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/armeabi/libopencv_java3.so
 3.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main
-15.set=DEX
+15.set=ANDROID_RESOURCE
 4.set=ANDROID_RESOURCE
 5.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
 5.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/res/drawable/icon.png
@@ -13,23 +13,20 @@
 7.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips64/libopencv_java3.so
 11.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/ic_launcher.png
 11.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
-9.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
-9.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/res/layout/main_surface_view.xml
+9.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+9.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
 13.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/AndroidManifest.xml
 13.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
 11.set=ANDROID_RESOURCE
 0.set=ANDROID_RESOURCE
-15.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_554a0e0b43f033b93f1c9e04d3bfa725b7276e8c/classes.dex
-15.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_554a0e0b43f033b93f1c9e04d3bfa725b7276e8c
-17.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86_64/libopencv_java3.so
-17.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main
+15.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/resources.arsc
+15.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
 7.set=NATIVE_RESOURCE
 14.set=ANDROID_RESOURCE
 3.set=NATIVE_RESOURCE
-10.set=DEX
+10.set=ANDROID_RESOURCE
 0.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
 0.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/ic_launcher.png
-17.set=NATIVE_RESOURCE
 6.set=NATIVE_RESOURCE
 2.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/arm64-v8a/libopencv_java3.so
 2.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main
@@ -37,8 +34,8 @@
 4.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
 6.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main
 6.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips/libopencv_java3.so
-10.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6d05907a8f6296dbcf3bb6183d89d998d531da2f
-10.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6d05907a8f6296dbcf3bb6183d89d998d531da2f/classes.dex
+10.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
+10.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/res/layout/main_surface_view.xml
 13.set=ANDROID_RESOURCE
 8.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main
 8.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86/libopencv_java3.so
@@ -47,11 +44,11 @@
 12.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
 14.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/res/mipmap-mdpi-v4/ic_launcher.png
 14.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
-16.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_/resources.arsc
-16.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/res/resources-debug.ap_
-9.set=ANDROID_RESOURCE
-count=18
-16.set=ANDROID_RESOURCE
+16.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86_64/libopencv_java3.so
+16.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main
+9.set=DEX
+count=17
+16.set=NATIVE_RESOURCE
 5.set=ANDROID_RESOURCE
 12.set=ANDROID_RESOURCE
 1.set=NATIVE_RESOURCE
