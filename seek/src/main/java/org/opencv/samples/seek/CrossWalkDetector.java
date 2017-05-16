@@ -163,9 +163,9 @@ public class CrossWalkDetector{
         int W = rgbaImage.width();
         int H = rgbaImage.height();
 
-        int ratio = H/W;
-        W = 800;
-        H = W * ratio;
+//       int ratio = H/W;
+//        W = 800;
+//        H = W * ratio;
 
         java.util.List<Point> bxbyLeftArray = new ArrayList<>();
         java.util.List<Point> bxbyRightArray = new ArrayList<>();
@@ -282,10 +282,14 @@ public class CrossWalkDetector{
                 int POVx = W / 2;
                 int POVy = H / 2;
 
-                int dx = -(int) intersect[0] - POVx; //regular x,y axis coordinates
-                int dy = -(int) intersect[1] - POVy; //regular x,y axis coordinates
+                int dx = -(int)(intersect[0] - POVx); //regular x,y axis coordinates
+                int dy = -(int)(intersect[1] - POVy); //regular x,y axis coordinates
 
-                int focalpx = (int) (W * 4.26 / 6.604);
+                Log.d(TAG,"intersect(" + intersect[0] + "," + intersect[1]+")");
+
+                Log.d(TAG,"Count: : " + count);
+
+                //int focalpx = (int) (W * 4.26 / 6.604);
 
                 if (count < 6) {
                     DxArray.add(dx);
@@ -299,7 +303,9 @@ public class CrossWalkDetector{
                     DyArray.clear();
                     count = 0;
                 }
-                Log.d(TAG,"Count: : " + count);
+
+                Log.d(TAG,"intersect(" + intersect[0] + "," + intersect[1]+")");
+
                 Log.d(TAG,"DxAve: " + DxAve + ", DyAve: " + DyAve);
 
                 if ((DyAve > 30) && (Math.abs(DxAve) < 300)) {
@@ -307,20 +313,20 @@ public class CrossWalkDetector{
 
                     //check if the vanishing point and the next vanishing point aren't too far from each other
                     if ((Math.pow((DxAve - Dxold), 2) + Math.pow((DyAve - Dyold), 2) < (150 * 150)) == true)  //distance 150 px max
-                        Imgproc.line(rgbaImage, new Point(W/2, H/2), new Point(W / 2 + DxAve, H / 2 + DyAve), new Scalar(0, 0, 255), 7);
+                        Imgproc.line(rgbaImage, new Point(W/2, H/2), new Point(W / 2 + DxAve, H / 2 + DyAve), new Scalar(255, 0, 0), 7);
 
                     //walking directions
                     if ((Math.abs(DxAve) < 80) && (DyAve > 100) && Math.abs(Dxold - DxAve) < 20) {
                         state = "Straight";
-                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 0),
+                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(255, 0, 0),
                                 2, Imgproc.LINE_AA, false);
                     } else if ((DxAve > 80) && (DyAve > 100) && (Math.abs(Dxold - DxAve) < 20)) {
                         state = "Right";
-                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 255),
+                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(255, 0, 0),
                                 2, Imgproc.LINE_AA, false);
                     } else if ((DxAve < 80) && (DyAve > 100) && (Math.abs(Dxold - DxAve) < 20)) {
                         state = "Left";
-                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 255),
+                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(255, 0, 0),
                                 2, Imgproc.LINE_AA, false);
                     } else {
                         Imgproc.line(rgbaImage, new Point(W / 2, H / 2), new Point(W/2 + Dxold, H / 2 +
@@ -331,7 +337,7 @@ public class CrossWalkDetector{
                     if (state == "Straight") {
                         Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 0), 2, Imgproc.LINE_AA, false);
                     } else {
-                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 255),
+                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(255, 0, 0),
                                 2, Imgproc.LINE_AA, false);
                     }
                     Dxold = DxAve;
