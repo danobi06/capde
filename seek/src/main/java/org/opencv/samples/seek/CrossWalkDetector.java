@@ -31,8 +31,19 @@ public class CrossWalkDetector{
     /* Local Variables */
     double thresh = 150; //optimal 150
     int radius = 150;
-    long count = 0;
-    //int bw_width = 300; //#170
+
+    /* Variables for  direction vector*/
+    java.util.List<Integer>  DxArray= new ArrayList<>();
+    java.util.List<Integer>  DyArray= new ArrayList<>();
+
+    int after =0;
+    int DxAve =0;
+    int Dxold =0;
+    int DyAve =0;
+    int Dyold =0;
+    int count = 0; //counts the number of times processed is called
+    String state = "";
+
 
     //Cache
     //Mat rgbaImage = new Mat(); //image to process
@@ -48,11 +59,6 @@ public class CrossWalkDetector{
     Mat mThresh1 = new Mat();
     Mat mEdges = new Mat();
     Mat mHierarchy = new Mat();
-//
-//    java.util.List<Integer> bxLeft = new ArrayList<>();
-//    java.util.List<Integer> byLeft = new ArrayList<>();
-//    java.util.List<Integer> bxRight = new ArrayList<>();
-//    java.util.List<Integer> byRight = new ArrayList<>();
 
     //lineCalc
     public double[] lineCalc(double vx, double vy, double x0, double y0 ){
@@ -87,18 +93,13 @@ public class CrossWalkDetector{
         return val;
 
     }
-
-//    /* returns a list of random points */
-//    private java.util.List setRand(java.util.List<Point> input){
-//        Log.d(TAG,"randomizing boundaries");
-//        java.util.List<Point> randOutput = new ArrayList<>();
-//
-//        for (int i = 0; i < input.size()/2; i++) { //7 random points
-//            randOutput.add(input.get(new Random().nextInt(input.size())));
-//        }
-//
-//        return randOutput;
-//    }
+    public int sum(java.util.List<Integer> array){
+        int sum = 0;
+        for (int i = 0; i < array.size(); i++) {
+            sum += array.get(i);
+        }
+        return sum;
+    }
     /* sets the bounds for the crosswalk */
     private double[] setBounds(Mat img, java.util.List<Point> bLine){
         MatOfPoint matOfPoint = new MatOfPoint();
@@ -116,20 +117,6 @@ public class CrossWalkDetector{
         double[] p_3 = outLine.get(2,0);//point on line x
         double[] p_4 = outLine.get(3,0);//point on line y
 
-//        Log.d(TAG,"Outline size: "+outLine.size());
-//
-//        Log.d(TAG,"Direction X: "+p_1[0]);
-//        Log.d(TAG,"Direction X size: "+p_1.length);
-//
-//        Log.d(TAG,"Direction Y: "+p_2[0]);
-//        Log.d(TAG,"Direction Y size: "+p_2.length);
-//
-//        Log.d(TAG,"point on line x: "+p_3[0]);
-//        Log.d(TAG,"point on line x size: "+p_3.length);
-//
-//        Log.d(TAG,"Point on line Y: "+p_4[0]);
-//        Log.d(TAG,"Point on line Y size: "+p_4.length);
-//
         double vals[] = {p_1[0],p_2[0],p_3[0],p_4[0]};
 
         return vals;
@@ -172,6 +159,14 @@ public class CrossWalkDetector{
     }
 
     public void process(Mat rgbaImage) {
+        /* Initialization */
+        int W = rgbaImage.width();
+        int H = rgbaImage.height();
+
+        int ratio = H/W;
+        W = 800;
+        H = W * ratio;
+
         java.util.List<Point> bxbyLeftArray = new ArrayList<>();
         java.util.List<Point> bxbyRightArray = new ArrayList<>();
 
@@ -181,31 +176,16 @@ public class CrossWalkDetector{
         mGray.release();
         Core.inRange(mBlur, new Scalar(170,170,170), new Scalar(255,255,255), mMask);
         mBlur.release();
-////
-//////    /*Threshold 1 */
-////        Imgproc.threshold(mGray, mThresh1, thresh, 255, 0);
-////        mGray.release();
-////
-////        Imgproc.Sobel(mThresh1, mEdges, CvType.CV_8U, 0,1);
-////
-//////    /* findContours */
-//        List<MatOfPoint> contours = new ArrayList<>();
-////        /* TODO
-////         limit contour size */
-//        Imgproc.findContours(mEdges, contours, mHierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
-//        mEdges.release();
-//
-
 
 //        Imgproc.adaptiveThreshold(mMask, th2, 255, Imgproc.ADAPTIVE_THRESH_MEAN_C,Imgproc.THRESH_BINARY,15,-2);
-        Log.d(TAG,"copied threshold");
+       // Log.d(TAG,"copied threshold");
 
         int cols = mMask.cols();
 
         int horizontalsize = cols / 30;
 
         Mat horizontalStructure = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(horizontalsize, 1));
-        Log.d(TAG,"got structuring element: "+ horizontalStructure);
+        //Log.d(TAG,"got structuring element: "+ horizontalStructure);
 
         Imgproc.erode(mMask, erode, horizontalStructure);
         mMask.release();
@@ -215,7 +195,7 @@ public class CrossWalkDetector{
         List<MatOfPoint> contours = new ArrayList<>();
 
         Imgproc.findContours(erode, contours, mHierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
-        Log.d(TAG,"found contours");
+       // Log.d(TAG,"found contours");
         erode.release();
 
         /*** draw lines ***/
@@ -240,30 +220,29 @@ public class CrossWalkDetector{
                 Imgproc.circle(rgbaImage, new Point((rect.x + rect.width), rect.y), 10, tealCircle, 4);
             }
         }
+        contours.clear();
 
         if(bxbyLeftArray.size() >=3 && bxbyRightArray.size() >= 3){
             Scalar boundColor = new Scalar(0, 0, 255);
             Scalar intersectColor = new Scalar(255,0,0);
 
             java.util.List<Point> inlierL = _RANSAC(bxbyLeftArray);
-            Log.d(TAG,"inlierLSize: " + inlierL.size());
+            //Log.d(TAG,"inlierLSize: " + inlierL.size());
             java.util.List<Point> inlierR = _RANSAC(bxbyRightArray);
-            Log.d(TAG,"inlierRSize: " + inlierR.size());
+            //Log.d(TAG,"inlierRSize: " + inlierR.size());
 
 
             for (int i = 0; i < inlierL.size(); i++) {
                 Imgproc.circle(rgbaImage, inlierL.get(i), 15, new Scalar(244,107,66), 3); //left points
 
-                    Log.d(TAG,"InlierL " + "("+ inlierL.get(i).x + ", "+ inlierL.get(i).y + ")");
+                    //Log.d(TAG,"InlierL " + "("+ inlierL.get(i).x + ", "+ inlierL.get(i).y + ")");
             }
             for (int i = 0; i < inlierR.size(); i++) {
                 Imgproc.circle(rgbaImage, inlierR.get(i), 15, new Scalar(250,250,250), 3); //right points
-                Log.d(TAG,"InlierR " + "("+ inlierR.get(i).x + ", "+ inlierR.get(i).y + ")");
+                //Log.d(TAG,"InlierR " + "("+ inlierR.get(i).x + ", "+ inlierR.get(i).y + ")");
 
             }
 
-            //double[] LTline = setBounds(rgbaImage, bounds.get(0)); //line boundary for left points
-            //double[] RTline = setBounds(rgbaImage, bounds.get(1)); //line boundary for right points
             double[] LTline = setBounds(rgbaImage, inlierL); //line boundary for left points
             double[] RTline = setBounds(rgbaImage, inlierR); //line boundary for right points
             if (LTline.length > 1 && RTline.length > 1) {
@@ -282,22 +261,83 @@ public class CrossWalkDetector{
                 double y0_R = RTline[3];
 //                Log.d(TAG,"Right Bound Values ");
 
-                int m = radius*10;
+                int m = radius * 10;
 
-//                Log.d(TAG,"drawing bounds");
+                double mbL[] = lineCalc(vx, vy, x0, y0);
 
-                Imgproc.line(rgbaImage, new Point(x0-m*vx, y0-m*vy), new Point(x0+m*vx, y0+m*vy), boundColor, 3);
-                Imgproc.line(rgbaImage, new Point(x0_R-m*vx_R, y0_R-m*vy_R), new Point(x0_R+m*vx_R, y0_R+m*vy_R), boundColor, 3);
-
-                double mbL[] =lineCalc(vx, vy, x0, y0);
-
-                double mbR[] =lineCalc(vx_R, vy_R, x0_R, y0_R);
+                double mbR[] = lineCalc(vx_R, vy_R, x0_R, y0_R);
 
                 double[] intersect = lineIntersect(mbR[0], mbR[1], mbL[0], mbL[1]);
 
-                Imgproc.circle(rgbaImage, new Point((int) intersect[0], (int) intersect[1]), 10, intersectColor, 15);
-                //count++;
-                //Log.d(TAG, "Count Num: " + count);
+                if (intersect[1] < rgbaImage.height() / 2) {
+
+                    Imgproc.line(rgbaImage, new Point(x0 - m * vx, y0 - m * vy), new Point(x0 + m * vx, y0 + m * vy), boundColor, 3);
+                    Imgproc.line(rgbaImage, new Point(x0_R - m * vx_R, y0_R - m * vy_R), new Point(x0_R + m * vx_R, y0_R + m * vy_R), boundColor, 3);
+                    Imgproc.circle(rgbaImage, new Point((int) intersect[0], (int) intersect[1]), 10, intersectColor, 15);
+                }
+
+
+                /* calculating the direction vector */
+
+                int POVx = W / 2;
+                int POVy = H / 2;
+
+                int dx = -(int) intersect[0] - POVx; //regular x,y axis coordinates
+                int dy = -(int) intersect[1] - POVy; //regular x,y axis coordinates
+
+                int focalpx = (int) (W * 4.26 / 6.604);
+
+                if (count < 6) {
+                    DxArray.add(dx);
+                    DyArray.add(dy);
+                    count++;
+                }
+                else {
+                    DxAve = sum(DxArray) / DxArray.size();
+                    DyAve = sum(DyArray) / (DyArray.size());
+                    DxArray.clear();
+                    DyArray.clear();
+                    count = 0;
+                }
+                Log.d(TAG,"Count: : " + count);
+                Log.d(TAG,"DxAve: " + DxAve + ", DyAve: " + DyAve);
+
+                if ((DyAve > 30) && (Math.abs(DxAve) < 300)) {
+                    Log.d(TAG,"Processing direction vector");
+
+                    //check if the vanishing point and the next vanishing point aren't too far from each other
+                    if ((Math.pow((DxAve - Dxold), 2) + Math.pow((DyAve - Dyold), 2) < (150 * 150)) == true)  //distance 150 px max
+                        Imgproc.line(rgbaImage, new Point(W/2, H/2), new Point(W / 2 + DxAve, H / 2 + DyAve), new Scalar(0, 0, 255), 7);
+
+                    //walking directions
+                    if ((Math.abs(DxAve) < 80) && (DyAve > 100) && Math.abs(Dxold - DxAve) < 20) {
+                        state = "Straight";
+                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 0),
+                                2, Imgproc.LINE_AA, false);
+                    } else if ((DxAve > 80) && (DyAve > 100) && (Math.abs(Dxold - DxAve) < 20)) {
+                        state = "Right";
+                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 255),
+                                2, Imgproc.LINE_AA, false);
+                    } else if ((DxAve < 80) && (DyAve > 100) && (Math.abs(Dxold - DxAve) < 20)) {
+                        state = "Left";
+                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 255),
+                                2, Imgproc.LINE_AA, false);
+                    } else {
+                        Imgproc.line(rgbaImage, new Point(W / 2, H / 2), new Point(W/2 + Dxold, H / 2 +
+                                Dyold), new Scalar(0, 0, 255));
+                    }
+
+                    //walking directions
+                    if (state == "Straight") {
+                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 0), 2, Imgproc.LINE_AA, false);
+                    } else {
+                        Imgproc.putText(rgbaImage, state, new Point(50, 50), Core.FONT_HERSHEY_PLAIN, 3, new Scalar(0, 0, 255),
+                                2, Imgproc.LINE_AA, false);
+                    }
+                    Dxold = DxAve;
+                    Dyold = DyAve;
+
+                }
             }
 
         }

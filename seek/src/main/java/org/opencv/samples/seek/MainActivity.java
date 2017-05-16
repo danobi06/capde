@@ -118,6 +118,7 @@ public class MainActivity  extends Activity implements CameraBridgeViewBase.CvCa
 
     public Mat onCameraFrame(CvCameraViewFrame inputFrame) {
         Log.d(TAG, "onCameraFrame");
+
         mRgba = inputFrame.rgba();
 
         mDetector.process(mRgba);

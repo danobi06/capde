@@ -42,42 +42,25 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/classes/debug/org/opencv/samples/seek/MainActivity.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/classes/debug/org/opencv/samples/seek/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/CrossWalkDetector.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/CrossWalkDetector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/MainActivity.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$id.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$layout.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$mipmap.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$string.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$styleable.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental-verifier/debug/org/opencv/samples/seek/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/zip-cache/yBjKHD7U7hw7ta_xvyHADcR5uOs=" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/zip-cache/yBjKHD7U7hw7ta_xvyHADcR5uOs=" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/yBjKHD7U7hw7ta_xvyHADcR5uOs=" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/yBjKHD7U7hw7ta_xvyHADcR5uOs=" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="$PROJECT_DIR$/seek/build/intermediates/instant-run-resources/resources-debug.ir.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/seek/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/split-apk/debug/slices/slice_4.apk" afterPath="$PROJECT_DIR$/seek/build/intermediates/split-apk/debug/slices/slice_4.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/CrossWalkDetector.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/CrossWalkDetector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/MainActivity.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$id.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$layout.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$mipmap.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$string.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$styleable.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRun/debug/folders/1/5/main/org/opencv/samples/seek/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/CrossWalkDetector.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/CrossWalkDetector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/MainActivity.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$id.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$layout.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$mipmap.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$string.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$styleable.class" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/org/opencv/samples/seek/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/outputs/apk/seek-debug.apk" afterPath="$PROJECT_DIR$/seek/build/outputs/apk/seek-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build.gradle" afterPath="$PROJECT_DIR$/seek/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/seek/build/intermediates/restart-dex/debug/build-info.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" afterPath="$PROJECT_DIR$/seek/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/seek.iml" afterPath="$PROJECT_DIR$/seek/seek.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/CrossWalkDetector.java" afterPath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/CrossWalkDetector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/MainActivity.java" afterPath="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/MainActivity.java" />
     </list>
     <ignored path="tutorial-1-camerapreview.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,8 +97,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+            <state relative-caret-position="279">
+              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,9 +107,11 @@
       <file leaf-file-name="CrossWalkDetector.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/CrossWalkDetector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="245" column="56" selection-start-line="245" selection-start-column="56" selection-end-line="245" selection-end-column="56" />
-              <folding />
+            <state relative-caret-position="249">
+              <caret line="310" column="59" selection-start-line="310" selection-start-column="59" selection-end-line="310" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2279,7 +2264,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5975164509000" />
+        <entry key="$PROJECT_DIR$" value="5975616533000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2734,6 +2719,7 @@
         <option value="$PROJECT_DIR$/seek/src/main/java/LineManager.java" />
         <option value="$PROJECT_DIR$/seek/src/main/java/DistanceFromLine.java" />
         <option value="$PROJECT_DIR$/seek/src/main/res/layout/homescreen.xml" />
+        <option value="$PROJECT_DIR$/seek/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/seek/build.gradle" />
         <option value="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/MainActivity.java" />
         <option value="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/CrossWalkDetector.java" />
@@ -2741,10 +2727,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="y" value="23" />
-    <option name="width" value="1385" />
-    <option name="height" value="877" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2771,6 +2755,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2830,13 +2816,29 @@
               <option name="myItemId" value="CapDE" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seek" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seek" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CapDE" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2847,6 +2849,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="device.picker.selection" value="c50ee7a1" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager" selected="Android App.seek">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -3230,7 +3233,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="23" width="1385" height="877" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
@@ -3239,14 +3242,14 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34739456" sideWeight="0.5114449" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34739456" sideWeight="0.48855507" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34739456" sideWeight="0.48855507" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3285151" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3101737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23157111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22246066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3281,19 +3284,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/CrossWalkDetector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3317,7 +3314,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3333,7 +3332,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3349,7 +3350,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3365,7 +3368,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2745">
           <caret line="195" column="1" selection-start-line="195" selection-start-column="1" selection-end-line="195" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3381,7 +3386,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3397,7 +3404,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3413,7 +3422,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3429,7 +3440,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1905">
           <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3445,7 +3458,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3461,7 +3476,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3477,7 +3494,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3493,7 +3512,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3581,14 +3602,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seek/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/openCVLibrary300/src/main/java/org/opencv/core/Point.java">
@@ -3631,38 +3652,51 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seek/src/main/res/layout/main_surface_view.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seek/src/main/res/layout/homescreen.xml" />
     <entry file="file://$PROJECT_DIR$/seek/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seek/src/main/res/layout/activity_home.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+        <state relative-caret-position="279">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seek/src/main/java/org/opencv/samples/seek/CrossWalkDetector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="245" column="56" selection-start-line="245" selection-start-column="56" selection-end-line="245" selection-end-column="56" />
-          <folding />
+        <state relative-caret-position="249">
+          <caret line="310" column="59" selection-start-line="310" selection-start-column="59" selection-end-line="310" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

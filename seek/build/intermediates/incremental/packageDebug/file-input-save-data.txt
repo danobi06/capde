@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu May 11 17:07:55 EDT 2017
+#Tue May 16 00:44:23 EDT 2017
 8.set=NATIVE_RESOURCE
 1.base=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main
 1.file=/Users/dobi/workspace/seniorDesign/Android/CapDE/seek/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/armeabi-v7a/libopencv_java3.so

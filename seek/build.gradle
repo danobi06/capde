@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 dependencies {
     compile project(':openCVLibrary300')
     compile group: 'org.ddogleg', name: 'ddogleg', version: '0.10'
-
 }
 
 android {
