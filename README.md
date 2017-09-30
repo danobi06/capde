@@ -2,8 +2,15 @@
 The City College of New York: Senior Design Project Fall2016-Spring2017
 
 ## Project Description
-For visually impaired persons (VIPs), navigating new and even familiar environments can be challenging. Crossing intersections is a particular challenge because it can be difficult to determine the state of traffic and whether or not they have the right-of-way. Our research will attempt to discover if a user can accurately determine the state of the pedestrian signal at a crosswalk. This will allow VIPs to know when they’re within the pedestrian phase of the crosswalk signal, and provide them with the information necessary to safely cross.
+For visually impaired persons (VIPs), navigating new and even familiar environments can be challenging. Crossing intersections is a particular challenge because it can be difficult to determine the state of traffic and whether or not they have the right-of-way. Our research will attempt to discover if a user can accurately determine the state of the pedestrian signal at a crosswalk. This will allow VIPs to know when they’re within the pedestrian phase of the crosswalk signal, and provide them with the information necessary to safely cross using an Android smartphone.
 
+## Tools and Resources
+* openCVLibrary: (http://opencv.org/platforms/android/)
+* minSdkVersion 8
+* targetSdkVersion 8
+
+## Latest APK Build
+https://github.com/danobi06/capde/blob/master/seek/build/outputs/apk/seek-debug.apk
 
 ## Notable Results
 Seek app: Horizontal Line Detection of a crosswalk
